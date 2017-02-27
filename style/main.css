@@ -116,6 +116,7 @@ header img{
 footer{
     background-color: #000;
     position: relative;
+    height: 143px;
 }
 footer li{
     list-style: none;
@@ -134,11 +135,12 @@ footer p{
     margin: 0 auto;
     text-align: center;
     position: relative;
+    top: 34px;
 }
 #logo_sociaux{
     position: absolute;
     width: 12%;
-    top: 43px;
+    top: 70px;
     text-align: right;
     left: 88%;
 }
@@ -150,6 +152,7 @@ footer p{
 
 div.fond h1{
     text-align: center;
+    padding: 20px 0 0;
 }
 #bloc_text_contact{
     background-color: #fff;
@@ -164,7 +167,23 @@ margin: 0 auto;
 #bloc_horaire ul{
     padding:0;
 }
-#bloc_form{
+#bloc_form {
     background-color: #fff;
     margin: 2% 10%;
+}
+
+#form_contact input[type='submit']{
+    margin-top: 2%;
+    width: 11%;
+    margin-left: 44%;
+}
+#form_contact input, textarea{
+    border-radius: 5px;
+    background-color: #E1E1E1;
+}
+#form_contact textarea{
+    height: 140px;
+}
+#form_contact label{
+    font-family: "Arial Black";
 }

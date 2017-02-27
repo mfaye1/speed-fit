@@ -32,16 +32,16 @@ require_once 'views/header.php';
             </div>
         </div>
         <div id="bloc_form" class="col-10">
-            <form action="#">
-                <label for="nom">Nom</label>
-                <input type="text" name="nom" id="nom" placeholder="Placez votre nom de famille">
-                <label for="prenom">Prenom</label>
-                <input type="text" name="prenom" id="prenom" placeholder="Placez votre prenom ici">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="blabla@gmail.com">
-                <label for="commentaire">Commentaires</label>
-                <textarea name="commentaire" id="commentaire"></textarea>
-                <input type="submit" value="Submit">
+            <form id='form_contact' action="#">
+                <label class="col-12" for="nom">Nom</label>
+                <input class="col-6" type="text" name="nom" id="nom" placeholder="Placez votre nom de famille">
+                <label class="col-12" for="prenom">Prenom</label>
+                <input class="col-6" type="text" name="prenom" id="prenom" placeholder="Placez votre prenom ici">
+                <label class="col-12"for="email">Email</label>
+                <input class="col-6" type="email" name="email" id="email" placeholder="blabla@gmail.com">
+                <label class="col-12"for="commentaire">Commentaires</label>
+                <textarea  class="col-12"name="commentaire" id="commentaire"></textarea>
+                <input  class="col-12"type="submit" value="Soumettre">
             </form>
         </div>
     </div>
