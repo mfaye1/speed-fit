@@ -8,4 +8,3 @@
     <script src="script/jquery-3.1.1-min.js"></script>
     <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="script/main.js"></script>
-    <title>Title</title>
