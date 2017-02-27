@@ -10,26 +10,28 @@ require_once 'views/top.php';
 <?php
 require_once 'views/header.php';
 ?>
-    <div id="wrapper">
+<img src="images/gym4.jpg">
+    <div  class="fond row" id="wrapper">
         <h1>Contact</h1>
-        <div id="bloc_text_contact">
-            <div id="bloc_adresse"></div>
+        <div id="bloc_text_contact" class="col-10">
+            <div id="bloc_adresse" class="col-6">
             <h2>Adresse</h2>
             <p>255 Boul Cremazie E, Montreal, QC H2M 1M2</p>
-            <div id="bloc_horaire">
+            </div>
+            <div id="bloc_horaire" class="col-6">
                 <h2>Horaire d'ouverture</h2>
                 <ul>
-                    <li>Lundi 8H00 - 19H00</li>
-                    <li>Mardi 8H00 - 19H00</li>
-                    <li>Mercredi 8H00 - 19H00</li>
-                    <li>Jeudi 8H00 - 19H00</li>
-                    <li>Vendredi 8H00 - 19H00</li>
-                    <li>Samedi 8H00 - 19H00</li>
-                    <li>Dimanche 8H00 - 19H00</li>
+                    <li>Lundi <span>8H00 - 19H00</span></li>
+                    <li>Mardi <span>8H00 - 19H00</span></li>
+                    <li>Mercredi <span>8H00 - 19H00</span></li>
+                    <li>Jeudi <span>8H00 - 19H00</span></li>
+                    <li>Vendredi <span>8H00 - 19H00</span></li>
+                    <li>Samedi <span>8H00 - 19H00</span></li>
+                    <li>Dimanche <span>8H00 - 19H00</span></li>
                 </ul>
             </div>
         </div>
-        <div id="bloc_form">
+        <div id="bloc_form" class="col-10">
             <form action="#">
                 <label for="nom">Nom</label>
                 <input type="text" name="nom" id="nom" placeholder="Placez votre nom de famille">

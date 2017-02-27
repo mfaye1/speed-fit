@@ -142,3 +142,29 @@ footer p{
     text-align: right;
     left: 88%;
 }
+
+/**************---------------CONTACT--------------***********************************************/
+.fond{
+    background-color: #EBEBEB;
+}
+
+div.fond h1{
+    text-align: center;
+}
+#bloc_text_contact{
+    background-color: #fff;
+    margin-left: 10%;
+}
+#bloc_adresse{
+margin: 0 auto;
+}
+#bloc_horaire li{
+    list-style: none;
+}
+#bloc_horaire ul{
+    padding:0;
+}
+#bloc_form{
+    background-color: #fff;
+    margin: 2% 10%;
+}
