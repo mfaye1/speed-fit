@@ -43,4 +43,3 @@ function get_articles($where = '') {
     }
     return $data;
 }
-

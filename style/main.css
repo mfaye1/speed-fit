@@ -112,6 +112,7 @@ header li a {
 header img{
     width: 170px;
 }
+
 /**************---------------le FOOTER--------------***********************************************/
 footer{
     background-color: #000;
@@ -192,4 +193,8 @@ margin: 0 auto;
 }
 #form_contact label{
     font-family: "Arial Black";
+}
+/***********************************-----accueil-***-----------------------*/
+main img:first-of-type{
+    width: 100%;
 }
