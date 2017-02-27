@@ -160,6 +160,10 @@ div.fond h1{
 }
 #bloc_adresse{
 margin: 0 auto;
+    padding: 0 50px;
+}
+#bloc_horaire{
+    padding: 0 50px;
 }
 #bloc_horaire li{
     list-style: none;
@@ -171,7 +175,9 @@ margin: 0 auto;
     background-color: #fff;
     margin: 2% 10%;
 }
-
+#form_contact{
+    padding: 0 50px;
+}
 #form_contact input[type='submit']{
     margin-top: 2%;
     width: 11%;
