@@ -7,9 +7,9 @@
         <div class="col-6">
             <nav>
                 <ul class="row">
-                    <li class="col-2"><a href="../accueil.php"> Accueil</a></li>
+                    <li class="col-2"><a href="accueil.php"> Accueil</a></li>
                     <li class="col-2"><a href="#"> Activités</a></li>
-                    <li class="col-2"><a href="../contact.php"> Contact</a></li>
+                    <li class="col-2"><a href="contact.php"> Contact</a></li>
                     <li class="col-2"><a href="#"> Connexion</a></li>
                     <li class="col-2"><a href="#"> Inscription</a></li>
                 </ul>
