@@ -30,13 +30,15 @@ require_once 'views/header.php';
             </div>
         </div>
         <div id="bloc_form">
-            <form>
-                <label>First name:
-                <input type="text" name="firstname" value="Mickey">
-                <br>
-                Last name:<br>
-                <input type="text" name="lastname" value="Mouse">
-                <br><br>
+            <form action="#">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" id="nom" placeholder="Placez votre nom de famille">
+                <label for="prenom">Prenom</label>
+                <input type="text" name="prenom" id="prenom" placeholder="Placez votre prenom ici">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="blabla@gmail.com">
+                <label for="commentaire">Commentaires</label>
+                <textarea name="commentaire" id="commentaire"></textarea>
                 <input type="submit" value="Submit">
             </form>
         </div>
