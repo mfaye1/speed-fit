@@ -5,7 +5,10 @@
 aside, div, section, header, footer, nav {
     display: block;
 }
-
+html{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
 body {
     margin: 0;
 }
@@ -72,4 +75,40 @@ p{
 
 .col-12 {
     width: 100%;
+}
+/**************---------------le HEADER--------------***********************************************/
+#menu_fixe{
+    background-color: white;
+}
+#menu_fixe li{
+    line-height: 2px;
+}
+#menu_fixe a{
+    color: #56aad6;
+}
+/*---------------------------*/
+#second_menu{
+background-color: #56aad6;
+    height: 70px;
+}
+#second_menu a{
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+#second_menu li{
+    line-height: 70px;
+    display: inline-block;
+    width: 19%;
+    text-align: center;
+}
+/*---------------------------*/
+header li{
+    list-style-type: none;
+}
+header li a {
+    text-decoration: none;
+}
+header img{
+    width: 170px;
 }
