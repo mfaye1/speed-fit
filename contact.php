@@ -37,6 +37,7 @@ require_once 'views/header.php';
             <h2>Adresse</h2>
             <p>255 Boul Cremazie E, Montreal, QC H2M 1M2</p>
             </div>
+            <div class="line"></div>
             <div id="bloc_horaire" class="col-6">
                 <h2>Horaire d'ouverture</h2>
                 <ul>

@@ -158,6 +158,7 @@ div.fond h1{
 #bloc_text_contact{
     background-color: #fff;
     margin-left: 10%;
+    padding-left: 9%;
 }
 #bloc_adresse{
 margin: 0 auto;
@@ -193,6 +194,12 @@ margin: 0 auto;
 }
 #form_contact label{
     font-family: "Arial Black";
+}
+.line{
+    border: 1px solid #000;
+    position: absolute;
+    height: 200px;
+    left: 50%;
 }
 /***********************************-----accueil-***-----------------------*/
 main img:first-of-type{
