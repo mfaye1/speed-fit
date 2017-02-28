@@ -175,6 +175,7 @@ div.fond h1 {
 #bloc_text_contact {
     background-color: #fff;
     margin-left: 10%;
+    padding-left: 9%;
 }
 
 #bloc_adresse {
@@ -222,6 +223,12 @@ div.fond h1 {
     font-family: "Arial Black";
 }
 
+.line{
+    border: 1px solid #000;
+    position: absolute;
+    height: 200px;
+    left: 50%;
+}
 /***********************************-----accueil-***-----------------------*/
 .banner img:first-of-type {
     width: 100%;
@@ -230,6 +237,7 @@ div.fond h1 {
 .categorie_index .col-4 img{
     width: 100%;
 }
+
 /*-----le hover--*/
 figure {
     border:5px ridge grey;
@@ -249,5 +257,26 @@ figcaption {
 
 figure:hover figcaption {
     transition:all 1s;
-    opacity:1;
+    opacity:1;}
+
+/***********************************-----Inscription-***-----------------------*/
+#bloc_text_contact{
+    background-color: #fff;
+    margin-left: 10%;
+}
+#bloc_sexe{
+    position: relative;
+}
+input[type='radio']:first-of-type,input[type='radio']:nth-of-type(2){
+    position: absolute;
+    top: 40%;
+    left: 2%;
+}
+input[type='radio']:nth-of-type(2){
+    left:26%;
+}
+.text_int{
+    font-size: 1.1rem;
+    text-align: center;
+
 }

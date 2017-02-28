@@ -28,10 +28,31 @@ require_once 'views/header.php';
 ?>
 <?php echo "<main>"?>
 <?php   { ?>
-<div>
-    <img src="<?= PATH_IMAGE, $articles[29]['image'] ?>" alt=""/></a>
+<div class="banner">
+    <img src="<?= PATH_IMAGE, $articles[29]['image'] ?>" alt="une fille en pompe comme banner de la page d'accueil"/></a>
 </div>
 <?php } ?>
 
+<div class="categorie_index row">
+    <?php   { ?>
+        <figure class="col-4">
+            <img src="<?= PATH_IMAGE, $articles[53]['image'] ?>" alt=""/>
+            <figcaption>cette homme est avec son enfant n'est ce pas ? maintenant allons-y</figcaption>
+        </figure>
+        <figure class="col-4">
+            <img src="<?= PATH_IMAGE, $articles[41]['image'] ?>" alt=""/>
+            <figcaption>cette femme est en train de se masser n'est ce pas ? maintenant allons-y</figcaption>
+        </figure>
+        <figure class="col-4">
+            <img src="<?= PATH_IMAGE, $articles[41]['image'] ?>" alt=""/>
+            <figcaption>cette femme est en train de se masser n'est ce pas ? maintenant allons-y</figcaption>
+        </figure>
+    <?php } ?>
+</div>
+
+
+<?php
+require_once "views/footer.php";
+?>
 
 
