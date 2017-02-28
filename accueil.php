@@ -26,15 +26,32 @@ require_once 'views/top.php';
 <?php
 require_once 'views/header.php';
 ?>
-<?php echo "<main>"?>
-<?php   { ?>
-<div class="banner">
-    <img src="<?= PATH_IMAGE, $articles[29]['image'] ?>" alt="une fille en pompe comme banner de la page d'accueil"/></a>
-</div>
+<?php echo "<main>" ?>
+<?php { ?>
+    <div class="banner">
+        <img src="<?= PATH_IMAGE, $articles[29]['image'] ?>"
+             alt="une fille en pompe comme banner de la page d'accueil"/></a>
+    </div>
 <?php } ?>
+<div>
+    <div class="row text_bande_bleu">
+        <div class="col-4">
+            <p>QUI SOMMES NOUS ?</p>
+        </div>
+        <div class="col-8">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio ex, porta mollis maximus vel,
+                imperdiet sed enim. Vivamus condimentum et arcu ac fermentum. Morbi sed interdum lectus. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit. Fusce viverra ornare nulla, nec tempus augue malesuada in.
+                Sed lacinia odio ac rutrum laoreet. Aliquam placerat libero non facilisis elementum.</p>
+        </div>
+    </div>
+    <div class="bande_bleu">
+        <img src="images/bande_bleu.png" alt="">
+    </div>
+</div>
 
 <div class="categorie_index row">
-    <?php   { ?>
+    <?php { ?>
         <div id="promo_famille" class="col-4">
             <img src="<?= PATH_IMAGE, $articles[118]['image'] ?>" alt=""/>
             <p class="genre">cette homme est avec son enfant n'est ce pas ? maintenant allons-y</p>
