@@ -11,7 +11,7 @@
                     <li class="col-2"><a href="#"> Activités</a></li>
                     <li class="col-2"><a href="contact.php"> Contact</a></li>
                     <li class="col-2"><a href="#"> Connexion</a></li>
-                    <li class="col-2"><a href="#"> Inscription</a></li>
+                    <li class="col-2"><a href="inscription.php"> Inscription</a></li>
                 </ul>
             </nav>
         </div>
