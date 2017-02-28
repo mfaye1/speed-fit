@@ -238,26 +238,6 @@ div.fond h1 {
     width: 100%;
 }
 
-/*-----le hover--*/
-figure {
-    border:5px ridge grey;
-    position:relative;
-}
-
-figcaption {
-    opacity:0;
-    background-color: AntiqueWhite;
-    text-align:center;
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    border:5px ridge grey;
-}
-
-figure:hover figcaption {
-    transition:all 1s;
-    opacity:1;}
 
 /***********************************-----Inscription-***-----------------------*/
 #bloc_text_contact{
