@@ -161,7 +161,6 @@ footer p {
     padding: 0;
 }
 
-
 /**************---------------CONTACT--------------***********************************************/
 .fond {
     background-color: #EBEBEB;
@@ -224,44 +223,78 @@ div.fond h1 {
     font-family: "Arial Black";
 }
 
-.line{
+.line {
     border: 1px solid #000;
     position: absolute;
     height: 200px;
     left: 50%;
 }
+
 /***********************************-----accueil-***-----------------------*/
 .banner img:first-of-type {
     width: 100%;
     height: 700px;
 }
-.categorie_index .col-4 img{
+
+.categorie_index .col-4 img {
     width: 100%;
 }
 
-
 /***********************************-----Inscription-***-----------------------*/
-#bloc_text_contact{
+#bloc_text_contact {
     background-color: #fff;
     margin-left: 10%;
 }
-#bloc_sexe,#bloc_enfant{
+
+#bloc_sexe, #bloc_enfant {
     position: relative;
 }
-input[type='radio']:first-of-type,input[type='radio']:nth-of-type(2),input[type='checkbox']:first-of-type,input[type='checkbox']:nth-of-type(2){
+
+input[type='radio']:first-of-type, input[type='radio']:nth-of-type(2), input[type='checkbox']:first-of-type, input[type='checkbox']:nth-of-type(2) {
     position: absolute;
     top: 40%;
     left: 2%;
 }
-input[type='radio']:nth-of-type(2),input[type='checkbox']:nth-of-type(2){
-    left:26%;
-}
-input[type='checkbox']:first-of-type,input[type='checkbox']:nth-of-type(2){
-top: 65%;
+
+input[type='radio']:nth-of-type(2), input[type='checkbox']:nth-of-type(2) {
+    left: 26%;
 }
 
-.text_int{
+input[type='checkbox']:first-of-type, input[type='checkbox']:nth-of-type(2) {
+    top: 65%;
+}
+
+.text_int {
     font-size: 1.1rem;
     text-align: center;
 
+}
+
+#promo_famille:hover .genre, #promo_mass:hover .genre, #promo_vieu:hover .genre {
+    display: block;
+    margin: 0;
+    margin-bottom: 3.2%;
+}
+
+.genre {
+    /*display: none pour le titre;*/
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -60px;
+    padding-top: 20px;
+    width: 93.9%;
+    height: 60px;
+    background-color: rgba(86, 170, 214, 0.7);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-transition: margin 0.5s;
+    transition: margin 0.5s;
+}
+
+#promo_famille, #promo_mass, #promo_vieu {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #fff;
+    text-align: center;
 }

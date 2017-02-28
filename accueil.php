@@ -35,18 +35,18 @@ require_once 'views/header.php';
 
 <div class="categorie_index row">
     <?php   { ?>
-        <figure class="col-4">
-            <img src="<?= PATH_IMAGE, $articles[53]['image'] ?>" alt=""/>
-            <figcaption>cette homme est avec son enfant n'est ce pas ? maintenant allons-y</figcaption>
-        </figure>
-        <figure class="col-4">
-            <img src="<?= PATH_IMAGE, $articles[41]['image'] ?>" alt=""/>
-            <figcaption>cette femme est en train de se masser n'est ce pas ? maintenant allons-y</figcaption>
-        </figure>
-        <figure class="col-4">
-            <img src="<?= PATH_IMAGE, $articles[41]['image'] ?>" alt=""/>
-            <figcaption>cette femme est en train de se masser n'est ce pas ? maintenant allons-y</figcaption>
-        </figure>
+        <div id="promo_famille" class="col-4">
+            <img src="<?= PATH_IMAGE, $articles[118]['image'] ?>" alt=""/>
+            <p class="genre">cette homme est avec son enfant n'est ce pas ? maintenant allons-y</p>
+        </div>
+        <div id="promo_mass" class="col-4">
+            <img src="<?= PATH_IMAGE, $articles[115]['image'] ?>" alt=""/>
+            <p class="genre">cette femme est en train de se masser n'est ce pas ? maintenant allons-y</p>
+        </div>
+        <div id="promo_vieu" class="col-4">
+            <img src="<?= PATH_IMAGE, $articles[106]['image'] ?>" alt=""/>
+            <p class="genre">cette femme est en train de se masser n'est ce pas ? maintenant allons-y</p>
+        </div>
     <?php } ?>
 </div>
 
