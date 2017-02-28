@@ -185,7 +185,7 @@ margin: 0 auto;
     width: 11%;
     margin-left: 44%;
 }
-#form_contact input, textarea{
+#form_contact input, textarea, select{
     border-radius: 5px;
     background-color: #E1E1E1;
 }
@@ -211,17 +211,21 @@ main img:first-of-type{
     background-color: #fff;
     margin-left: 10%;
 }
-#bloc_sexe{
+#bloc_sexe,#bloc_enfant{
     position: relative;
 }
-input[type='radio']:first-of-type,input[type='radio']:nth-of-type(2){
+input[type='radio']:first-of-type,input[type='radio']:nth-of-type(2),input[type='checkbox']:first-of-type,input[type='checkbox']:nth-of-type(2){
     position: absolute;
     top: 40%;
     left: 2%;
 }
-input[type='radio']:nth-of-type(2){
+input[type='radio']:nth-of-type(2),input[type='checkbox']:nth-of-type(2){
     left:26%;
 }
+input[type='checkbox']:first-of-type,input[type='checkbox']:nth-of-type(2){
+top: 65%;
+}
+
 .text_int{
     font-size: 1.1rem;
     text-align: center;

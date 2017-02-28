@@ -51,9 +51,31 @@ require_once 'views/header.php';
                 <input class="col-6 text_int" type="number" name="age" id="age" placeholder="25 ans">
                 <div class="col-12" id="bloc_enfant">
                     <label class="col-12"for="enfant">Avez-vous des enfants</label>
+                    <label class="col-3" for="oui">Oui</label>
                     <input class="col-3"  type="checkbox" name="oui" id="oui" value="oui"/>
+                    <label class="col-3" for="non">Non</label>
                     <input class="col-3"  type="checkbox" name="non" id="non" value="non"/>
                 </div>
+                <label class="col-12"for="adresse">Adresse</label>
+                <input class="col-6 text_int" type="text" name="adresse" id="adresse" placeholder="255 Boul Crémazie E, Montréal, QC H2M 1M2">
+                <label class="col-12"for="ville">Ville</label>
+                <select class="col-6" name="ville" id="ville">
+                    <option>Selectionner...</option>
+                    <option>Montréal</option>
+                    <option>Quebec</option>
+                    <option>Longueil</option>
+                    <option>Laval</option>
+                    <option>Autres..</option>
+                </select>
+                <label class="col-12"for="activite">Activité Favori</label>
+                <select class="col-6" name="activite" id="activite">
+                    <option>Selectionner...</option>
+                    <option>Natation</option>
+                    <option>Course a pied</option>
+                    <option>Velos</option>
+                    <option>Fitness</option>
+                    <option>Art Martiaux</option>
+                </select>
                 <input  class="col-12"type="submit" value="Soumettre">
             </form>
         </div>
