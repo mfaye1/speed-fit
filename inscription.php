@@ -63,14 +63,20 @@ if ($reception && empty($sexe)) {
 $age = '';
 $age_valide = 'true';
 if (array_key_exists('champ_age', $_POST)) {
-    $age=filter_input(INPUT_POST,'champ_age',FILTER_SANITIZE_NUMBER_INT);
+    $age = filter_input(INPUT_POST, 'champ_age', FILTER_SANITIZE_NUMBER_INT);
 }
-if ($reception && empty($age)){
-    $age_valide=false;
+if ($reception && empty($age)) {
+    $age_valide = false;
 }
-var_dump($age);
+/*****------validatio du champ adresse*/
+$adresse = '';
+$adresse_valide = true;
+if (array_key_exists('champ_adresse', $_POST)) {
+    $adresse = filter_input(INPUT_POST, 'champ_adresse', FILTER_SANITIZE_STRING);
+    $adresse_valide = (1 === preg_match('', $adresse));
+}
 
-if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide && $age_valide) {
+if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide && $age_valide && $adresse_valide) {
     header('Location:inscription.php');
     exit;
 }
@@ -135,7 +141,7 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
                 <input class="col-6 text_int" type="number" name="champ_age" id="champ_age" placeholder="25 ans">
                 <?php
                 if (!$age_valide) {
-                    echo "<p>veuillez indiquer votre age</p>";
+                    echo "<p>veuillez indiquer votre age s'il vous plait </p>";
                 }
                 ?>
             </div>
