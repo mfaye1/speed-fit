@@ -1,4 +1,6 @@
 <?php
+$description = "";
+$title = "";
 require_once "define.php";
 require_once 'db/db_access.php';
 require_once 'db/db_define_local.php';
@@ -33,7 +35,6 @@ if (array_key_exists('champ_nom', $_POST)) {
     $nom = filter_input(INPUT_POST, 'champ_nom', FILTER_SANITIZE_STRING);
     $nom_valide = (1 === preg_match('/[A-Za-z]\w{1,}/', $nom));
 }
-var_dump($nom_valide);
 /***validation du nom*/
 $prenom = '';
 $prenom_valide = true;
@@ -49,8 +50,27 @@ if (array_key_exists('champ_email', $_POST)) {
     $email = filter_input(INPUT_POST, 'champ_email', FILTER_SANITIZE_STRING);
     $email_valide = (false !== filter_var($email, FILTER_VALIDATE_EMAIL));
 }
+/****validation de sexe*/
+$sexe = array();
+$sexe_valide = true;
+if (array_key_exists('sexe', $_POST)) {
+    $sexe = $_POST['sexe'];
+}
+if ($reception && empty($sexe)) {
+    $sexe_valide = false;
+}
+/*********validation du champ age-----*/
+$age = '';
+$age_valide = 'true';
+if (array_key_exists('champ_age', $_POST)) {
+    $age=filter_input(INPUT_POST,'champ_age',FILTER_SANITIZE_NUMBER_INT);
+}
+if ($reception && empty($age)){
+    $age_valide=false;
+}
+var_dump($age);
 
-if ($reception && $nom_valide && $prenom_valide && $email_valide) {
+if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide && $age_valide) {
     header('Location:inscription.php');
     exit;
 }
@@ -96,18 +116,28 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide) {
             </div>
             <label class="col-12" for="champ_sexe">Sexe</label>
 
-            <div>
+            <div class="<?= $sexe_valide ? '' : 'invalid' ?>">
                 <div class="col-12" id="bloc_sexe">
-                    <label class="col-3" for="champ_sexe_h">Homme:</label>
-                    <input class="col-3" type="radio" name="champ_sexe" id="champ_sexe_h" value="sexe_h"/>
-                    <label class="col-3" for="champ_sexe_f">Femme:</label>
-                    <input class="col-3" type="radio" name="champ_sexe" id="champ_sexe_f" value="sexe_f"/>
+                    <label class="col-3" for="sexe">Homme:</label>
+                    <input class="col-3" type="radio" name="sexe[]" id="sexe" value="sexe_h"/>
+                    <label class="col-3" for="sexe">Femme:</label>
+                    <input class="col-3" type="radio" name="sexe[]" id="sexe" value="sexe_f"/>
                 </div>
+                <?php
+                if (!$sexe_valide) {
+                    echo "<p>selectionner un sexe s'il vous plait</p>";
+                }
+                ?>
             </div>
 
-            <div>
+            <div class="<?= $age_valide ? '' : 'invalid' ?>">
                 <label class="col-12" for="champ_age">Age</label>
                 <input class="col-6 text_int" type="number" name="champ_age" id="champ_age" placeholder="25 ans">
+                <?php
+                if (!$age_valide) {
+                    echo "<p>veuillez indiquer votre age</p>";
+                }
+                ?>
             </div>
 
             <div>
