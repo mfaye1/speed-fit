@@ -2,8 +2,8 @@
 require_once "define.php";
 require_once 'db/db_access.php';
 require_once 'db/db_define_local.php';
-?>
-<?php
+require_once 'views/top.php';
+require_once 'views/header.php';
 $id_cat = '';
 $where = '';
 if (array_key_exists(CAT_ID, $_GET)) {
@@ -19,13 +19,7 @@ if (array_key_exists(CAT_ID, $_GET)) {
 $articles = get_articles($where);
 //var_dump($articles[29]);
 ?>
-<?php
-require_once 'views/top.php';
-?>
-</head>
-<?php
-require_once 'views/header.php';
-?>
+
 <?php echo "<main>" ?>
 <?php { ?>
     <div class="banner">

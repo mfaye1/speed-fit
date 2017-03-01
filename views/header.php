@@ -1,4 +1,3 @@
-<body>
 <header>
     <div id="menu_fixe" class="row">
         <div class="col-6">
