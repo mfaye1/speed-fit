@@ -7,7 +7,7 @@
         </ul>
     </div>
     <div class="row">
-        <div class="col-10">
+        <div class="col-12">
             <p>Copyright &nbsp projet-ISI Mamadou et Willy</p>
         </div>
         <div id="logo_sociaux" class="row col-2">

@@ -240,6 +240,11 @@ div.fond h1 {
     height: 200px;
     left: 50%;
 }
+#logo_sociaux{
+    position: absolute;
+    /* top: 6%; */
+    left: 83%;
+}
 
 /***********************************-----accueil-***-----------------------*/
 .banner img:first-of-type {
