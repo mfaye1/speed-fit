@@ -19,6 +19,16 @@ body {
 p {
     font-family: Arial, sans-serif;
 }
+.invalid p{
+    display:inline-block;
+    width: 100%;
+    color: red;
+
+}
+.invalid input{
+    border: solid 1px red;
+}
+
 
 [class*="col-"] {
     float: left;

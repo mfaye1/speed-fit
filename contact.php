@@ -3,10 +3,7 @@ require_once 'define.php';
 require_once 'db/db_access.php';
 require_once 'db/db_define_local.php';
 require_once 'views/top.php';
-
-?>
-
-<?php
+require_once 'views/header.php';
 $id_cat = '';
 $where = '';
 if (array_key_exists(CAT_ID, $_GET)) {
@@ -21,13 +18,6 @@ if (array_key_exists(CAT_ID, $_GET)) {
 // Chargement des articles
 $articles = get_articles($where);
 //var_dump($articles[29]);
-?>
-
-    <title></title>
-    </head>
-
-<?php
-require_once 'views/header.php';
 ?>
     <img src="<?= PATH_IMAGE, $articles[28]['image'] ?>" alt=""/>
     <div  class="fond row" id="wrapper">
