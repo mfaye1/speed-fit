@@ -4,6 +4,9 @@ $title = "";
 require_once "define.php";
 require_once 'db/db_access.php';
 require_once 'db/db_define_local.php';
+?>
+
+<?php
 require_once "views/top.php";
 require_once "views/header.php";
 $id_cat = '';
@@ -21,6 +24,10 @@ if (array_key_exists(CAT_ID, $_GET)) {
 $articles = get_articles($where);
 //var_dump($articles[29]);
 ?>
+
+<?php echo "</head>" ?>
+
+
 <?php
 var_dump($_POST);
 $reception = array_key_exists('champ_prenom', $_POST)
@@ -73,7 +80,7 @@ $adresse = '';
 $adresse_valide = true;
 if (array_key_exists('champ_adresse', $_POST)) {
     $adresse = filter_input(INPUT_POST, 'champ_adresse', FILTER_SANITIZE_STRING);
-    $adresse_valide = (1 === preg_match('', $adresse));
+    $adresse_valide = (1 === preg_match('/[0-9][A-Za-z]\w{1,}/', $adresse));
 }
 
 if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide && $age_valide && $adresse_valide) {
@@ -82,12 +89,12 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
 }
 
 ?>
-
 <img src="<?= PATH_IMAGE, $articles[14]['image'] ?>" alt=""/>
 <div class="fond row" id="wrapper">
     <h1>Inscription</h1>
     <div id="bloc_form" class="col-10">
         <form method="post" id='form_contact' action="#">
+
             <div class="<?= $nom_valide ? '' : 'invalid' ?>">
                 <label class="col-12" for="champ_nom">Nom</label>
                 <input class="col-6 text_int" type="text" name="champ_nom" id="champ_nom"
@@ -189,6 +196,10 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
             <div>
                 <input class="col-12" type="submit" value="Soumettre">
             </div>
+
         </form>
     </div>
 </div>
+<?php
+require_once "views/footer.php";
+?>
