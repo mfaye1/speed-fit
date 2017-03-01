@@ -53,16 +53,22 @@ require_once 'views/header.php';
 <div class="categorie_index row">
     <?php { ?>
         <div id="promo_famille" class="col-4">
-            <img src="<?= PATH_IMAGE, $articles[118]['image'] ?>" alt=""/>
-            <p class="genre">cette homme est avec son enfant n'est ce pas ? maintenant allons-y</p>
+            <a href="#">
+                <img src="<?= PATH_IMAGE, $articles[118]['image'] ?>" alt=""/>
+                <p class="genre">cette homme est avec son enfant n'est ce pas ? maintenant allons-y</p>
+            </a>
         </div>
         <div id="promo_mass" class="col-4">
-            <img src="<?= PATH_IMAGE, $articles[115]['image'] ?>" alt=""/>
-            <p class="genre">cette femme est en train de se masser n'est ce pas ? maintenant allons-y</p>
+            <a href="#">
+                <img src="<?= PATH_IMAGE, $articles[115]['image'] ?>" alt=""/>
+                <p class="genre">cette femme est en train de se masser n'est ce pas ? maintenant allons-y</p>
+            </a>
         </div>
         <div id="promo_vieu" class="col-4">
-            <img src="<?= PATH_IMAGE, $articles[106]['image'] ?>" alt=""/>
-            <p class="genre">cette femme est en train de se masser n'est ce pas ? maintenant allons-y</p>
+            <a href="#">
+                <img src="<?= PATH_IMAGE, $articles[106]['image'] ?>" alt=""/>
+                <p class="genre">cette femme est en train de se masser n'est ce pas ? maintenant allons-y</p>
+            </a>
         </div>
     <?php } ?>
 </div>
