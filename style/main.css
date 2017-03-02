@@ -349,7 +349,6 @@ input[type='checkbox']:first-of-type, input[type='checkbox']:nth-of-type(2) {
     padding: 0;
     margin: 0;
     list-style: none;
-    text-align: center;
     width: 180px;
 }
 
@@ -357,25 +356,30 @@ input[type='checkbox']:first-of-type, input[type='checkbox']:nth-of-type(2) {
     padding: 0;
     margin-bottom: 5%;
     list-style: none;
-    text-align: center;
 }
 
 #menu-deroulant li {
     margin-bottom: 7%;
-    background-color: #729EBF;
-    background-image: -webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
-    background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+    background-color: #fff;
     border-radius: 6px;
-    box-shadow: 3px 3px 3px #999;
-    border: solid 1px #333A40
 }
+
+#menu-deroulant li:hover {
+   background-color:  #56aad6;
+}
+
+#menu-deroulant li:first-of-type {
+   text-align: center;
+    border-bottom: 1px solid #56aad6;
+}
+
 
 #menu-deroulant li li {
     max-height: 0;
     overflow: hidden;
     transition: all .5s;
     border-radius: 0;
-    background: #444;
+    background: #fff;
     box-shadow: none;
     border: none;
     margin: 0
@@ -384,7 +388,7 @@ input[type='checkbox']:first-of-type, input[type='checkbox']:nth-of-type(2) {
 #menu-deroulant a {
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: #56aad6;
     padding: 8px 0;
     font-size: 1.2em
 }
@@ -394,11 +398,11 @@ input[type='checkbox']:first-of-type, input[type='checkbox']:nth-of-type(2) {
 }
 
 #menu-deroulant li:hover {
-    background: #729EBF
+    background: #fff;
 }
 
 #menu-deroulant li li:hover {
-    background: #999;
+    background: #fff;
 }
 
 #menu-deroulant ul li:last-child {
@@ -418,6 +422,7 @@ input[type='checkbox']:first-of-type, input[type='checkbox']:nth-of-type(2) {
 
 #defillement ul li a {
     list-style-type: none;
-    color: white;
+    color: #56aad6;
     text-align: left;
 }
+
