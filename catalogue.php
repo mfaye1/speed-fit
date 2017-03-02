@@ -2,8 +2,8 @@
 $description='';
 $title='';
 require_once "define.php";
-require_once 'db/db_access.php';
 require_once 'db/db_define_local.php';
+require_once 'db/db_access_miniature.php';
 require_once 'views/top.php';
 require_once 'views/header.php';
 $id_cat = '';
@@ -20,7 +20,7 @@ if (array_key_exists(CAT_ID, $_GET)) {
 //var_dump($where);
 //SELECT image FROM `article` WHERE id=29
 // Chargement des articles
-$articles = get_articles();
+$articles = get_article();
 //var_dump($articles);
 ?>
 <main>

@@ -21,39 +21,25 @@ if ($res && ($res->num_rows > 0)) {
         $categories[$article_cat['id']] = $article_cat;
     }
 }
+//var_dump($query_str);
+//var_dump($res);
 //var_dump($categories);
 
 /**
  * Fournit un tableu d'article
  * @return array
  */
-function get_articles($where = '') {
+function get_article()
+{
     global $mysqli;
     // Rédaction de la requete sur les articles
-    $query_str = 'SELECT * FROM `article` ' . $where; // Sélection de tous les articles
+    $query_str = "SELECT * FROM `article` WHERE `image` LIKE '%-m%' ORDER BY `name` ASC"; // Sélection de tous les articles
 
     $res = $mysqli->query($query_str); // xécution de la requête
 
     // Chargement des données, ligne par ligne (boucle while)
     $data = array();
-    if ($res && ($res->num_rows > 0)) {
-        while ($article = $res->fetch_assoc()) {
-            $data[$article['id']] = $article;
-        }
-    }
-    return $data;
-}
-
-function get_article($where = '') {
-    global $mysqli;
-    // Rédaction de la requete sur les articles
-    $query_str = 'SELECT * FROM `article` ' . $where; // Sélection de tous les articles
-
-    $res = $mysqli->query($query_str); // xécution de la requête
-
-    // Chargement des données, ligne par ligne (boucle while)
-    $data = array();
-    if ($res && ($res->num_rows > 0)) {
+    if ($res && ($res->num_rows >0)) {
         while ($article = $res->fetch_assoc()) {
             $data[$article['id']] = $article;
         }
