@@ -112,6 +112,17 @@ $articles = get_articles($where);
                 </p>
             </div>
         </div>
+        <div>
+            <div class="row text_bande_bleu">
+                <div class="col-4">
+                    <p><a href="catalogue.php">RETOUR AU ACTIVITES</a></p>
+                </div>
+            </div>
+            <div class="bande_bleu">
+                <img src="images/bande_bleu.png" alt="">
+            </div>
+        </div>
+
     </div>
 
 
