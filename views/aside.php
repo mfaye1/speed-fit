@@ -5,10 +5,10 @@
             <input type="submit" name="rechercher" value="rechercher">
         </form>
     </div>
-    <div>
-        <ul id="menu-deroulant">
-            <li><a href="#">Categories</a>
+    <div id="menu-deroulant">
+<!--        <ul id="menu-deroulant">-->
                 <ul>
+                    <li><a href="#">Categories</a>
                     <li><a href="catalogue.php?catid=8">Natation</a></li>
                     <li><a href="catalogue.php?catid=1">Fitness</a></li>
                     <li><a href="catalogue.php?catid=5">Arts Martiaux</a></li>
@@ -18,6 +18,6 @@
                 </ul>
             </li><!--
  -->
-        </ul>
+<!--        </ul>-->
     </div>
 </aside>
