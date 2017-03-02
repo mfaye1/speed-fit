@@ -25,7 +25,7 @@ $articles = get_articles($where);
 //var_dump($articles[29]);
 ?>
 
-    <img src="<?= PATH_IMAGE, $articles[28]['image'] ?>" alt=""/>
+    <img src="<?= PATH_IMAGE, $articles[30]['image'] ?>" alt=""/>
     <div class="fond row" id="wrapper">
         <div class="bloc_text_activite">
             <h2>L'activité</h2>
@@ -112,6 +112,17 @@ $articles = get_articles($where);
                 </p>
             </div>
         </div>
+        <div>
+            <div class="row text_bande_bleu">
+                <div class="col-4">
+                    <p><a href="catalogue.php">RETOUR AU ACTIVITES</a></p>
+                </div>
+            </div>
+            <div class="bande_bleu">
+                <img src="images/bande_bleu.png" alt="">
+            </div>
+        </div>
+
     </div>
 
 
