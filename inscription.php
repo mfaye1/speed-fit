@@ -30,6 +30,8 @@ $articles = get_articles($where);
 
 <?php
 var_dump($_POST);
+$liste_ville=array('Montréal','Quebec','Longueil','Laval');
+$liste_activite=array('Natation','Course', 'Velos' ,'Fitness' ,'Art Martiaux');
 $reception = array_key_exists('champ_prenom', $_POST)
     && array_key_exists('champ_nom', $_POST)
     && array_key_exists('champ_email', $_POST)
@@ -83,7 +85,30 @@ if (array_key_exists('champ_adresse', $_POST)) {
     $adresse_valide = (1 === preg_match('/[0-9][A-Za-z]\w{1,}/', $adresse));
 }
 
-if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide && $age_valide && $adresse_valide) {
+/******************validation du champ enfant************/
+$enfant = array();
+$enfant_valide = true;
+if (array_key_exists('enfant', $_POST)) {
+    $enfant = $_POST['enfant'];
+}
+if ($reception && empty($enfant)) {
+    $enfant_valide = false;
+}
+/***********validation des selects ******----*/
+
+$ville= $liste_ville;
+$ville_valide=true;
+if (array_key_exists('ville', $_POST)) {
+    $ville = $_POST['ville'];
+}
+if ($reception && (empty($ville) || $_POST['ville']=$ville[0])) {
+    $ville_valide = false;
+}
+var_dump($ville);
+
+
+if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide && $age_valide && $adresse_valide
+                && $enfant_valide ) {
     header('Location:inscription.php');
     exit;
 }
@@ -153,25 +178,35 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
                 ?>
             </div>
 
-            <div>
+            <div class="<?= $enfant_valide ? '' : 'invalid' ?>">
                 <div class="col-12" id="bloc_enfant">
                     <label class="col-12" for="enfant">Avez-vous des enfants</label>
-                    <label class="col-3" for="champ_oui">Oui</label>
-                    <input class="col-3" type="checkbox" name="champ_oui" id="champ_oui" value="oui"/>
-                    <label class="col-3" for="champ_non">Non</label>
-                    <input class="col-3" type="checkbox" name="champ_non" id="champ_non" value="non"/>
+                    <label class="col-3" for="enfant">Oui</label>
+                    <input class="col-3" type="checkbox" name="enfant[]" id="enfant" value="oui"/>
+                    <label class="col-3" for="enfant">Non</label>
+                    <input class="col-3" type="checkbox" name="enfant[]" id="enfant" value="non"/>
+                    <?php
+                    if (!$enfant_valide) {
+                        echo "<p>s'il vous plait veuillez indiquer si vous avez des enfants ou pas </p>";
+                    }
+                    ?>
                 </div>
             </div>
 
-            <div>
+            <div class="<?= $age_valide ? '' : 'invalid' ?>">
                 <label class="col-12" for="champ_adresse">Adresse</label>
                 <input class="col-6 text_int" type="text" name="champ_adresse" id="champ_adresse"
                        placeholder="255 Boul Crémazie E, Montréal, QC H2M 1M2">
+                <?php
+                if (!$age_valide) {
+                    echo "<p>veuillez entrer une adresse comme indiquer sur le champ </p>";
+                }
+                ?>
             </div>
 
-            <div>
-                <label class="col-12" for="champ_ville">Ville</label>
-                <select class="col-6" name="champ_ville" id="champ_ville">
+            <div class="<?= $ville_valide ? '' : 'invalid' ?>">
+                <label class="col-12" for="ville">Ville</label>
+                <select class="col-6" name="ville[]" id="ville">
                     <option>Selectionner...</option>
                     <option>Montréal</option>
                     <option>Quebec</option>
@@ -179,6 +214,11 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
                     <option>Laval</option>
                     <option>Autres..</option>
                 </select>
+                <?php
+                if (!$ville_valide) {
+                    echo "<p>veuillez entrer une ville comme indiquer sur le champ </p>";
+                }
+                ?>
             </div>
 
             <div>
