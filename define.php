@@ -7,4 +7,4 @@
  */
 define('NOM_SITE', 'speed-fit');
 define("PATH_IMAGE",'images/');
-define("CAT_ID",'cat-id');
+define('CAT_ID', 'catid');

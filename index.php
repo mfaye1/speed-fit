@@ -13,14 +13,21 @@ if (array_key_exists(CAT_ID, $_GET)) {
     // Est-ce que l'id de categorie est valide ?
     if (array_key_exists($_GET[CAT_ID], $categories)) {
         $id_cat = $_GET[CAT_ID];
-        $where = " WHERE `id` = ";
+        $where = " WHERE `category_id`=$id_cat";
+        var_dump($where);
     }
+}
+
+function make_m_filename($filename) {
+    return str_replace('.jpg', '-m.jpg',$filename);
 }
 //var_dump($where);
 //SELECT image FROM `article` WHERE id=29
 // Chargement des articles
 $articles = get_articles($where);
-//var_dump($articles[29]);
+//var_dump($articles[53]['image']);
+
+
 ?>
 
 <?php echo "<main>" ?>
@@ -51,19 +58,19 @@ $articles = get_articles($where);
     <?php { ?>
         <div id="promo_famille" class="col-4">
             <a href="#">
-                <img src="<?= PATH_IMAGE, $articles[118]['image'] ?>" alt=""/>
+                <img src="<?= PATH_IMAGE, make_m_filename($articles[53]['image']) ?>" alt=""/>
                 <p class="genre">cette homme est avec son enfant n'est ce pas ? maintenant allons-y</p>
             </a>
         </div>
         <div id="promo_mass" class="col-4">
             <a href="#">
-                <img src="<?= PATH_IMAGE, $articles[115]['image'] ?>" alt=""/>
+                <img src="<?= PATH_IMAGE, make_m_filename($articles[47]['image']) ?>" alt=""/>
                 <p class="genre">cette femme est en train de se masser n'est ce pas ? maintenant allons-y</p>
             </a>
         </div>
         <div id="promo_vieu" class="col-4">
             <a href="#">
-                <img src="<?= PATH_IMAGE, $articles[106]['image'] ?>" alt=""/>
+                <img src="<?= PATH_IMAGE, make_m_filename($articles[36]['image']) ?>" alt=""/>
                 <p class="genre">cette femme est en train de se masser n'est ce pas ? maintenant allons-y</p>
             </a>
         </div>

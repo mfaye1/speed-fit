@@ -1,7 +1,7 @@
 <header>
     <div id="menu_fixe" class="row">
         <div class="col-6">
-            <img src="images/logo.png" alt="le logo du site">
+            <a href="index.php"> <img src="images/logo.png" alt="le logo du site"></a>
         </div>
         <div class="col-6">
             <nav>
@@ -18,11 +18,11 @@
     <div id="second_menu">
         <nav>
             <ul class="row">
-                <li><a href="#"> NATATION</a></li>
-                <li><a href="#"> FITNESS</a></li>
-                <li><a href="#"> ARTS MARTIAUX</a></li>
-                <li><a href="#"> COURSE A PIED</a></li>
-                <li><a href="#"> VELOS</a></li>
+                <li><a href="catalogue.php?catid=1""> NATATION</a></li>
+                <li><a href="catalogue.php?catid=2""> FITNESS</a></li>
+                <li><a href="catalogue.php?catid=4""> ARTS MARTIAUX</a></li>
+                <li><a href="catalogue.php?catid=3""> COURSE A PIED</a></li>
+                <li><a href="catalogue.php?catid=5""> VELOS</a></li>
             </ul>
         </nav>
     </div>
