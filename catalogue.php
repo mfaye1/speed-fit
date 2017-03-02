@@ -12,9 +12,10 @@ if (array_key_exists(CAT_ID, $_GET)) {
     // Est-ce que l'id de categorie est valide ?
     if (array_key_exists($_GET[CAT_ID], $categories)) {
         $id_cat = $_GET[CAT_ID];
-        $where = " WHERE `id` = ";
+        $where = " WHERE `id` =  ";
     }
 }
+
 //var_dump($where);
 //SELECT image FROM `article` WHERE id=29
 // Chargement des articles
