@@ -27,7 +27,7 @@ $articles = get_articles($where);
 
     <img src="<?= PATH_IMAGE, $articles[28]['image'] ?>" alt=""/>
     <div class="fond row" id="wrapper">
-        <div class="bloc_activite">
+        <div class="bloc_text_activite">
             <h2>L'activité</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec consequat metus, at finibus eros.
                 Pellentesque porttitor lectus at erat accumsan, eget cursus sapien pharetra. Praesent sit amet euismod
@@ -38,7 +38,7 @@ $articles = get_articles($where);
         </div>
 
         <div id="accordion">
-            <h3>Section 1</h3>
+            <h3>Pour les moins de 6 ans</h3>
             <div>
                 <p>
                     Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
@@ -47,7 +47,7 @@ $articles = get_articles($where);
                     odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
                 </p>
             </div>
-            <h3>Section 2</h3>
+            <h3>Pour les 6 et 10 ans</h3>
             <div>
                 <p>
                     Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
@@ -56,7 +56,7 @@ $articles = get_articles($where);
                     suscipit faucibus urna.
                 </p>
             </div>
-            <h3>Section 3</h3>
+            <h3>Pour les 10 ans et plus</h3>
             <div>
                 <p>
                     Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
@@ -70,7 +70,7 @@ $articles = get_articles($where);
                     <li>List item three</li>
                 </ul>
             </div>
-            <h3>Section 4</h3>
+            <h3>Débutant</h3>
             <div>
                 <p>
                     Cras dictum. Pellentesque habitant morbi tristique senectus et netus
@@ -82,6 +82,33 @@ $articles = get_articles($where);
                     Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
                     Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
                     inceptos himenaeos.
+                </p>
+            </div>
+            <h3>Intermediaire</h3>
+            <div>
+                <p>
+                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                    suscipit faucibus urna.
+                </p>
+            </div>
+            <h3>Avancé</h3>
+            <div>
+                <p>
+                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                    suscipit faucibus urna.
+                </p>
+            </div>
+            <h3>Expert</h3>
+            <div>
+                <p>
+                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                    suscipit faucibus urna.
                 </p>
             </div>
         </div>

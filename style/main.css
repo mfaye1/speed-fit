@@ -425,3 +425,38 @@ input[type='checkbox']:first-of-type, input[type='checkbox']:nth-of-type(2) {
     text-align: left;
 }
 
+
+/*****************-------------------Detail------------------*/
+div.bloc_text_activite {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px 26px;
+    margin-top: 1%;
+    background-color: #fff;
+    position: relative;
+    top: 15px;
+}
+
+div.bloc_text_activite h2{
+    color: #56aad6;
+}
+
+div.bloc_text_activite p{
+    text-align: justify;
+    line-height: 25px
+}
+
+#accordion{
+    width: 80%;
+    margin: 35px auto;
+    background-color: #fff;
+}
+
+#accordion h3{
+    color: #56aad6;
+    font-size: 1.2rem;
+}
+
+#accordion div{
+    height: 150px;
+}
