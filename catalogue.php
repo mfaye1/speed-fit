@@ -12,15 +12,16 @@ if (array_key_exists(CAT_ID, $_GET)) {
     // Est-ce que l'id de categorie est valide ?
     if (array_key_exists($_GET[CAT_ID], $categories)) {
         $id_cat = $_GET[CAT_ID];
-        $where = " WHERE `id` =  ";
+        $where = " WHERE  `id` =  ";
+
     }
 }
 
 //var_dump($where);
 //SELECT image FROM `article` WHERE id=29
 // Chargement des articles
-$articles = get_articles($where);
-//var_dump($articles[29]);
+$articles = get_articles();
+//var_dump($articles);
 ?>
 <main>
     <div id="wrapper" class="row">
@@ -29,8 +30,8 @@ $articles = get_articles($where);
 
         </div>
         <div class=" row col-9">
-            <?php foreach ($articles as $id => $article) { ?>
-                <div id="article" class="col-4">
+            <?php foreach ($articles as $id => $article)  { ?>
+                <div id="article" class="col-6">
                     <div>
                         <!--<h2><? /*= utf8_encode($article['name']) */ ?></h2>-->
                     </div>
