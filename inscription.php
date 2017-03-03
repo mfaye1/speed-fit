@@ -222,23 +222,6 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
                 <?php } ?>
             </div>
 
-            <!--            <div class="--><? //= $ville_valide ? '' : 'invalid' ?><!--">-->
-            <!--                <label class="col-12" for="ville">Ville</label>-->
-            <!--                <select class="col-6" name="ville[]" id="ville">-->
-            <!--                    <option value="-1" selected="selected">Selectionner...</option>-->
-            <!--                    <option value="MTL">Montréal</option>-->
-            <!--                    <option value="QC">Quebec</option>-->
-            <!--                    <option value="LG">Longueil</option>-->
-            <!--                    <option value="LV">Laval</option>-->
-            <!--                    <option value="AT">Autres..</option>-->
-            <!--                </select>-->
-            <!--                --><?php
-            //                if (!$ville_valide) {
-            //                    echo "<p>veuillez entrer une ville comme indiquer sur le champ </p>";
-            //                }
-            //                ?>
-            <!--            </div>-->
-
             <div>
                 <label class="col-12" for="champ_activite">Activité Favori</label>
                 <select class="col-6" name="champ_activite" id="champ_activite">
