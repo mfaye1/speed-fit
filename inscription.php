@@ -27,7 +27,7 @@ function retire_accents($str)
 }
 
 var_dump($_POST);
-$liste_villes = array('Montréal', 'Quebec', 'Longueil', 'Laval', 'Autres');
+$liste_villes = array('Montréal', 'Quebec', 'Longueil', 'Laval','Autres');
 $liste_activite = array('Natation', 'Course', 'Velos', 'Fitness', 'Art Martiaux');
 $reception = array_key_exists('champ_prenom', $_POST)
     && array_key_exists('champ_nom', $_POST)
@@ -94,13 +94,13 @@ if ($reception && empty($enfant)) {
 /***********validation des selects ******----*/
 
 
-$ville = array();
-$ville_valide = true;
+$ville= array();
+$ville_valide=true;
 if (array_key_exists('ville', $_POST)) {
     $ville = $_POST['ville'];
 }
 if ($reception && empty($ville)) {
-$ville_valide = false;
+    $ville_valide = false;
 
 $villes_valides = true;
 $villes = array(); // villes sélectionnés par l'utilisateur
@@ -215,19 +215,17 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
                 }
                 ?>
             </div>
-            
 
             <div class="<?= $villes_valides ? '' : 'invalid' ?>">
                 <label class="col-12" for="ville">Ville: </label>
                 <select class="col-6" name="ville[]" id="ville">
                     <?php foreach ($liste_villes as $ville) {
                         $option_value = ($ville);
-                        ?>
+                    }?>
                         <option value="<?= $option_value ?>"
-                            <?= array_key_exists('villes', $_POST) && in_array($option_value, $_POST['villes']) ? /*'selected="selected"' */ : '' ?>
+                            <?= array_key_exists('villes', $_POST) && in_array($option_value, $_POST['villes']) ? /*'selected="selected"' */: '' ?>
                         ><?= $ville ?></option>
                     <?php } ?>
-
                 </select>
                 <?php if (!$villes_valides) { ?>
                     <p>Au moins un ville doit être sélectionné.</p>
