@@ -39,10 +39,10 @@ $articles = get_articles($where);
 <?php } ?>
 <div>
     <div class="row text_bande_bleu">
-        <div class="col-4">
+        <div class="col-4 col-m-6">
             <p>QUI SOMMES NOUS ?</p>
         </div>
-        <div class="col-8">
+        <div class="col-8 col-m-5">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec odio ex, porta mollis maximus vel,
                 imperdiet sed enim. Vivamus condimentum et arcu ac fermentum. Morbi sed interdum lectus. Lorem ipsum
                 dolor sit amet, consectetur adipiscing elit. Fusce viverra ornare nulla, nec tempus augue malesuada in.
