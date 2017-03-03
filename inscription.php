@@ -96,12 +96,12 @@ if ($reception && empty($enfant)) {
 }
 /***********validation des selects ******----*/
 
-$ville= $liste_ville;
+$ville= array();
 $ville_valide=true;
 if (array_key_exists('ville', $_POST)) {
     $ville = $_POST['ville'];
 }
-if ($reception && (empty($ville) || $_POST['ville']=$ville[0])) {
+if ($reception && empty($ville)) {
     $ville_valide = false;
 }
 var_dump($ville);
@@ -206,7 +206,8 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
 
             <div class="<?= $ville_valide ? '' : 'invalid' ?>">
                 <label class="col-12" for="ville">Ville</label>
-                <select class="col-6" name="ville[]" id="ville">
+                <select class="col-6" name="ville[]" id="ville" multiple="multiple">
+                    
                     <option>Selectionner...</option>
                     <option>Montréal</option>
                     <option>Quebec</option>
