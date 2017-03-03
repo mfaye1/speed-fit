@@ -460,3 +460,8 @@ div.bloc_text_activite p{
 #accordion div{
     height: 150px;
 }
+
+div.text_bande_bleu p a{
+    text-decoration: none;
+    color: #fff;
+}
