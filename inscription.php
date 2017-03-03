@@ -101,7 +101,7 @@ if (array_key_exists('ville', $_POST)) {
 }
 if ($reception && empty($ville)) {
     $ville_valide = false;
-
+}
 $villes_valides = true;
 $villes = array(); // villes sélectionnés par l'utilisateur
 if (array_key_exists('villes', $_POST)) {
@@ -221,7 +221,7 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
                 <select class="col-6" name="ville[]" id="ville">
                     <?php foreach ($liste_villes as $ville) {
                         $option_value = ($ville);
-                    }?>
+                    ?>
                         <option value="<?= $option_value ?>"
                             <?= array_key_exists('villes', $_POST) && in_array($option_value, $_POST['villes']) ? /*'selected="selected"' */: '' ?>
                         ><?= $ville ?></option>
