@@ -27,8 +27,9 @@ function retire_accents($str)
 }
 
 var_dump($_POST);
-$liste_villes = array('Montréal', 'Quebec', 'Longueil', 'Laval','Autres');
-$liste_activite = array('Natation', 'Course', 'Velos', 'Fitness', 'Art Martiaux');
+
+$liste_villes = array('choisir', 'Montréal', 'Quebec', 'Longueil', 'Laval', 'Autres');
+$liste_activite = array('choisir', 'Natation', 'Course', 'Velos', 'Fitness', 'Art Martiaux');
 $reception = array_key_exists('champ_prenom', $_POST)
     && array_key_exists('champ_nom', $_POST)
     && array_key_exists('champ_email', $_POST)
@@ -94,9 +95,9 @@ if ($reception && empty($enfant)) {
 /***********validation des selects ******----*/
 
 $villes_valides = true;
-$villes = array(); // villes sélectionnés par l'utilisateur
-if (array_key_exists('villes', $_POST)) {
-    $villes = $_POST['villes'];
+$villes = ''; // villes sélectionnés par l'utilisateur
+if (array_key_exists('ville', $_POST) && (array_search($_POST['ville'], $liste_villes) > 0)) {
+    $villes = $_POST['ville'];
 }
 // villes est valide si on est affichage initial ou bien si on a au moins un sport sélectionné
 if ($reception && empty($villes)) {
@@ -104,10 +105,21 @@ if ($reception && empty($villes)) {
 }
 
 var_dump($villes);
+$activite_valide = true;
+$activite = array(); // villes sélectionnés par l'utilisateur
+if (array_key_exists('activite', $_POST)) {
+    $activite = $_POST['activite'];
+}
+// villes est valide si on est affichage initial ou bien si on a au moins un sport sélectionné
+if ($reception && empty($activite)) {
+    $activite_valide = false;
+}
+
+var_dump($activite);
 
 
 if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide && $age_valide && $adresse_valide
-    && $enfant_valide && $villes_valides
+    && $enfant_valide && $villes_valides && $activite_valide
 ) {
     header('Location:inscription.php');
     exit;
@@ -208,13 +220,10 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
 
             <div class="<?= $villes_valides ? '' : 'invalid' ?>">
                 <label class="col-12" for="ville">Ville: </label>
-                <select class="col-6" name="ville[]" id="ville">
+                <select class="col-6" name="ville" id="ville">
                     <?php foreach ($liste_villes as $ville) {
-                        $option_value = ($ville);
                         ?>
-                        <option value="<?= $option_value ?>"
-                            <?= array_key_exists('villes', $_POST) && in_array($option_value, $_POST['villes']) ? /*'selected="selected"' */: '' ?>
-                        ><?= $ville ?></option>
+                        <option value="<?= $ville ?>"><?= $ville ?></option>
                     <?php } ?>
                 </select>
                 <?php if (!$villes_valides) { ?>
@@ -222,16 +231,20 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
                 <?php } ?>
             </div>
 
-            <div>
-                <label class="col-12" for="champ_activite">Activité Favori</label>
-                <select class="col-6" name="champ_activite" id="champ_activite">
-                    <option>Selectionner...</option>
-                    <option>Natation</option>
-                    <option>Course a pied</option>
-                    <option>Velos</option>
-                    <option>Fitness</option>
-                    <option>Art Martiaux</option>
+            <div class="<?= $activite_valide ? '' : 'invalid' ?>">
+                <label class="col-12" for="activite">Activité Favori</label>
+                <select class="col-6" name="activite[]" id="activite">
+                    <?php foreach ($liste_activite as $activite) {
+                        $value = ($activite);
+                        ?>
+                        <option value="<?= $value ?>"
+                            <?= array_key_exists('activite', $_POST) && in_array($value, $_POST['activite']) ? 'selected="selected"' : '' ?>
+                        ><?= $activite ?></option>
+                    <?php } ?>
                 </select>
+                <?php if (!$activite_valide) { ?>
+                    <p>Au moins un ville doit être sélectionné.</p>
+                <?php } ?>
             </div>
 
             <div>
