@@ -81,7 +81,7 @@ if (is_logged_in() && array_key_exists('logout_btn', $_POST)) {
                     </form> ";
                      echo "
                   <marquee direction='left' scrollamount='4' onMouseOver='this.stop();' onMouseOut='this.start();'>
-                        <span>Salut <?= $username ?> ! bienvenu dans votre espace personel</span>
+                        <span>Bienvenu dans votre espace personel</span>
                     </marquee> " ;
 
                  }
@@ -124,13 +124,11 @@ if (is_logged_in() && array_key_exists('logout_btn', $_POST)) {
 
                 <?php } else { ?>
                     <form name="login" id="login" method="post">
-                        <div>
-                            <label for="username">Identifiant:</label>
+                        <div class="div_login">
                             <input type="text" name="username" id="username" placeholder="Identifiant"
                                    value="<?= array_key_exists('username', $_POST) ? $_POST['username'] : '' ?>"/>
                         </div>
-                        <div>
-                            <label for="password">Mot de Passe:</label>
+                        <div class="div_login">
                             <input type="password" name="password" id="password" placeholder="Mot de passe" value=""/>
                         </div>
 
@@ -138,8 +136,9 @@ if (is_logged_in() && array_key_exists('logout_btn', $_POST)) {
                         if (array_key_exists('login_btn', $_POST)) { ?>
                             <p>Le pseudo et le mot de passe fournis ne concordent pas.</p>
                         <?php } ?>
+                        <div class="div_login">
                         <input type="submit" id="login_btn" name="login_btn" value="Connecter"/>
-                        <a style="visibility: visible" href="inscription.php">s'inscrire</a>
+                        </div>
                     </form>
                 <?php } ?>
 
