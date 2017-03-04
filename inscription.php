@@ -94,6 +94,15 @@ if ($reception && empty($enfant)) {
 }
 /***********validation des selects ******----*/
 
+
+$ville= array();
+$ville_valide=true;
+if (array_key_exists('ville', $_POST)) {
+    $ville = $_POST['ville'];
+}
+if ($reception && empty($ville)) {
+    $ville_valide = false;
+}
 $villes_valides = true;
 $villes = ''; // villes sélectionnés par l'utilisateur
 if (array_key_exists('ville', $_POST) && (array_search($_POST['ville'], $liste_villes) > 0)) {
@@ -102,6 +111,7 @@ if (array_key_exists('ville', $_POST) && (array_search($_POST['ville'], $liste_v
 // villes est valide si on est affichage initial ou bien si on a au moins un sport sélectionné
 if ($reception && empty($villes)) {
     $villes_valides = false;
+
 }
 
 var_dump($villes);
@@ -224,6 +234,11 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
                     <?php foreach ($liste_villes as $ville) {
                         ?>
                         <option value="<?= $ville ?>"><?= $ville ?></option>
+                        $option_value = ($ville);
+                    ?>
+                        <option value="<?= $option_value ?>"
+                            <?= array_key_exists('villes', $_POST) && in_array($option_value, $_POST['villes']) ? /*'selected="selected"' */: '' ?>
+                        ><?= $ville ?></option>
                     <?php } ?>
                 </select>
                 <?php if (!$villes_valides) { ?>
