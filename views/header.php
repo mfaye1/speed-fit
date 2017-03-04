@@ -65,7 +65,7 @@ if (is_logged_in() && array_key_exists('logout_btn', $_POST)) {
 <header>
     <div id="menu_fixe" class="row">
         <div class="col-6">
-            <img src="images/logo.png" alt="le logo du site">
+            <a href="index.php"><img src="images/logo.png" alt="le logo du site"></a>
         </div>
         <div class="col-6">
             <nav>
