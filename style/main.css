@@ -673,13 +673,16 @@ footer.container {
     }
     #logout input {
         margin: 91px 0;
-        margin-left: -17%;
+
     }
     marquee{
         margin:0%;
     }
     .div_login input {
         width: 233px;
+    }
+    form#login p{
+        margin-left: 20px;
     }
     /****************************CATALOGUE*********************/
     .img_activites img{
