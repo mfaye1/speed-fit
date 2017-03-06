@@ -580,9 +580,7 @@ footer.container {
     height: 70px;
 }
 /***************************--------------------------------pour mobile 760px--------------------------------*/
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)  {
+@media only screen and (max-width: 900px) {
     /*--------------------------------------------grille mobile-------------------------------------------*/
     .col-m-1  {width: 8.33%;}
     .col-m-2  {width: 16.66%;}
