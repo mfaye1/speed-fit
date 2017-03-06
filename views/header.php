@@ -72,7 +72,7 @@ if (is_logged_in() && array_key_exists('logout_btn', $_POST)) {
                 <ul class="row">
                     <li class="col-2 col-m-12"><a href="index.php"> Accueil</a></li>
                     <li class="col-2 col-m-12"><a href="catalogue.php"> Activités</a></li>
-                    <li class="col-2"><a href="contact.php"> Contact</a></li>
+                    <li class="col-2 col-m-12"><a href="contact.php"> Contact</a></li>
                     <?php if (is_logged_in()) {
                         echo " 
                     <form name='logout' id='logout' method='post'>

@@ -580,7 +580,7 @@ footer.container {
     height: 70px;
 }
 /***************************--------------------------------pour mobile 760px--------------------------------*/
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
     /*--------------------------------------------grille mobile-------------------------------------------*/
     .col-m-1  {width: 8.33%;}
     .col-m-2  {width: 16.66%;}
@@ -673,7 +673,7 @@ footer.container {
     }
     #logout input {
         margin: 91px 0;
-        margin-left: -17%;
+
     }
     marquee{
         margin:0%;
@@ -681,9 +681,42 @@ footer.container {
     .div_login input {
         width: 233px;
     }
+    form#login p{
+        margin-left: 20px;
+    }
     /****************************CATALOGUE*********************/
     .img_activites img{
         width: 155%;
         padding-left: 61px;
+    }
+    /**********************CONTACT*************************/
+    #bloc_text_contact {
+        background-color: #fff;
+        margin-left: 0%;
+    }
+    img.col-m-12{
+        width: 100%;
+        padding: 0;
+    }
+    .line {
+        border: 1px solid #000;
+        position: relative;
+        height: 1px;
+        top: 105px;
+         left: 0%;
+    }
+    #bloc_form {
+        background-color: #fff;
+        margin: 2% 0%;
+    }
+    #form_contact input[type='submit'] {
+        margin-top: 2%;
+        width: 35%;
+        margin-left: 33%;
+    }
+    /**********************Inscription*************************/
+    img.col-m-12{
+        width: 100%;
+        padding: 0;
     }
 }
