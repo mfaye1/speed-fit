@@ -136,15 +136,15 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
 }
 
 ?>
-<img src="<?= PATH_IMAGE, $articles[14]['image'] ?>" alt=""/>
+<img class="col-m-12" src="<?= PATH_IMAGE, $articles[14]['image'] ?>" alt=""/>
 <div class="fond row" id="wrapper">
     <h1>Inscription</h1>
-    <div id="bloc_form" class="col-10">
+    <div id="bloc_form" class="col-10 col-m-12">
         <form method="post" id='form_contact' action="#">
 
             <div class="<?= $nom_valide ? '' : 'invalid' ?>">
                 <label class="col-12" for="champ_nom">Nom</label>
-                <input class="col-6 text_int" type="text" name="champ_nom" id="champ_nom"
+                <input class="col-6 col-m-12 text_int" type="text" name="champ_nom" id="champ_nom"
                        placeholder="Placez votre nom de famille" value="<?= $nom ?>">
                 <?php
 
@@ -156,7 +156,7 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
 
             <div class="<?= $prenom_valide ? '' : 'invalid' ?>">
                 <label class="col-12" for="champ_prenom">Prenom</label>
-                <input class="col-6 text_int" type="text" name="champ_prenom" id="champ_prenom"
+                <input class="col-6 col-m-12 text_int" type="text" name="champ_prenom" id="champ_prenom"
                        placeholder="Placez votre prenom ici" value="<?= $prenom ?>">
                 <?php
                 if (!$prenom_valide) {
@@ -167,7 +167,7 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
 
             <div class="<?= $email_valide ? '' : 'invalid' ?>">
                 <label class="col-12" for="champ_email">Email</label>
-                <input class="col-6 text_int" type="email" name="champ_email" id="champ_email"
+                <input class="col-6 col-m-12 text_int" type="email" name="champ_email" id="champ_email"
                        placeholder="blabla@gmail.com" value="<?= $email ?>">
                 <?php
                 if (!$email_valide) {
@@ -179,10 +179,10 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
 
             <div class="<?= $sexe_valide ? '' : 'invalid' ?>">
                 <div class="col-12" id="bloc_sexe">
-                    <label class="col-3" for="sexe">Homme:</label>
-                    <input class="col-3" type="radio" name="sexe[]" id="sexe" value="sexe_h"/>
-                    <label class="col-3" for="sexe">Femme:</label>
-                    <input class="col-3" type="radio" name="sexe[]" id="sexe" value="sexe_f"/>
+                    <label class="col-3 col-m-4" for="sexe">Homme:</label>
+                    <input class="col-3 col-m-6" type="radio" name="sexe[]" id="sexe" value="sexe_h"/>
+                    <label class="col-3 col-m-4" for="sexe">Femme:</label>
+                    <input class="col-3 col-m-8" type="radio" name="sexe[]" id="sexe" value="sexe_f"/>
                 </div>
                 <?php
                 if (!$sexe_valide) {
@@ -193,7 +193,7 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
 
             <div class="<?= $age_valide ? '' : 'invalid' ?>">
                 <label class="col-12" for="champ_age">Age</label>
-                <input class="col-6 text_int" type="number" name="champ_age" id="champ_age" placeholder="25 ans">
+                <input class="col-6 col-m-12 text_int" type="number" name="champ_age" id="champ_age" placeholder="25 ans">
                 <?php
                 if (!$age_valide) {
                     echo "<p>veuillez indiquer votre age s'il vous plait </p>";
@@ -204,10 +204,10 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
             <div class="<?= $enfant_valide ? '' : 'invalid' ?>">
                 <div class="col-12" id="bloc_enfant">
                     <label class="col-12" for="enfant">Avez-vous des enfants</label>
-                    <label class="col-3" for="enfant">Oui</label>
-                    <input class="col-3" type="checkbox" name="enfant[]" id="enfant" value="oui"/>
-                    <label class="col-3" for="enfant">Non</label>
-                    <input class="col-3" type="checkbox" name="enfant[]" id="enfant" value="non"/>
+                    <label class="col-3 col-m-4" for="enfant">Oui</label>
+                    <input class="col-3 col-m-4" type="checkbox" name="enfant[]" id="enfant" value="oui"/>
+                    <label class="col-3 col-m-4" for="enfant">Non</label>
+                    <input class="col-3 col-m-6" type="checkbox" name="enfant[]" id="enfant" value="non"/>
                     <?php
                     if (!$enfant_valide) {
                         echo "<p>s'il vous plait veuillez indiquer si vous avez des enfants ou pas </p>";
@@ -219,7 +219,7 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
             <div class="<?= $age_valide ? '' : 'invalid' ?>">
 
                 <label class="col-12" for="champ_adresse">Adresse</label>
-                <input class="col-6 text_int" type="text" name="champ_adresse" id="champ_adresse"
+                <input class="col-6 col-m-12 text_int" type="text" name="champ_adresse" id="champ_adresse"
                        placeholder="255 Boul Crémazie E, Montréal, QC H2M 1M2">
                 <?php
                 if (!$age_valide) {
@@ -230,7 +230,7 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
 
             <div class="<?= $villes_valides ? '' : 'invalid' ?>">
                 <label class="col-12" for="ville">Ville: </label>
-                <select class="col-6" name="ville" id="ville">
+                <select class="col-6 col-m-12" name="ville" id="ville">
                     <?php foreach ($liste_villes as $ville) {
                         ?>
                         <option value="<?= $ville ?>"><?= $ville ?></option>
@@ -247,7 +247,7 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
 
             <div class="<?= $activite_valide ? '' : 'invalid' ?>">
                 <label class="col-12" for="activite">Activité Favori</label>
-                <select class="col-6" name="activite[]" id="activite">
+                <select class="col-6 col-m-12" name="activite[]" id="activite">
                     <?php foreach ($liste_activite as $activite) {
                         $value = ($activite);
                         ?>
