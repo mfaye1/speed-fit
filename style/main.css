@@ -631,19 +631,24 @@ footer.container {
         margin: 0;
         min-width: 0%;
     }
-    .text_bande_bleu div.col-4 p:first-of-type {
+    .text_bande_bleu div.col-m-6 p:first-of-type  {
         height: 30px;
-        line-height: 30px;
-        border-right: 2px solid white;
+        line-height: 11px;
+        border-right: 0;
         text-align: center;
         font-size: 20px;
     }
+    .text_bande_bleu div.col-m-6 p:first-of-type{
+        font-size: 1rem;
+    }
     .text_bande_bleu div.col-8 p:first-of-type {
         position: relative;
-        top: -25px;
-        width: 114%;
-        text-align: left;
-        height: 78px;
+        left: -17%;
+        top: -14px;
+        width: 127%;
+        text-align: justify;
+        height: 100px;
+        font-size: 0.5rem;
     }
     .text_bande_bleu {
         position: absolute;
@@ -718,5 +723,8 @@ footer.container {
     img.col-m-12{
         width: 100%;
         padding: 0;
+        position: relative;
+        z-index: 1;
     }
+
 }

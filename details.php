@@ -25,7 +25,7 @@ $articles = get_articles($where);
 //var_dump($articles[29]);
 ?>
 
-    <img src="<?= PATH_IMAGE, $articles[30]['image'] ?>" alt=""/>
+    <img class="col-m-12" src="<?= PATH_IMAGE, $articles[30]['image'] ?>" alt=""/>
     <div class="fond row" id="wrapper">
         <div class="bloc_text_activite">
             <h2>L'activité</h2>
