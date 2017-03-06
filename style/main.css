@@ -167,7 +167,7 @@ footer p {
 
 }
 
-#logo_sociaux, #logo_sociaux img {
+#logo_sociaux a, #logo_sociaux img {
     margin: 0;
     padding: 0;
 }
@@ -451,6 +451,9 @@ input[type='checkbox']:first-of-type, input[type='checkbox']:nth-of-type(2) {
 }
 
 /*****************-------------------Detail------------------*/
+#banner_details img{
+    width: 100%;
+}
 div.bloc_text_activite {
     width: 80%;
     margin: 0 auto;

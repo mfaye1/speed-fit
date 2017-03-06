@@ -4,28 +4,33 @@ $title = "";
 require_once "define.php";
 require_once 'db/db_access.php';
 require_once 'db/db_define_local.php';
-?>
-
-<?php
 require_once "views/top.php";
 require_once "views/header.php";
-$id_cat = '';
-$where = '';
-if (array_key_exists(CAT_ID, $_GET)) {
+if (array_key_exists(ART_ID, $_GET)) {
     // Est-ce que l'id de categorie est valide ?
-    if (array_key_exists($_GET[CAT_ID], $categories)) {
-        $id_cat = $_GET[CAT_ID];
-        $where = " WHERE `id` = ";
+    if (array_key_exists($_GET[ART_ID], $categories)) {
+        $article_id = $_GET[ART_ID];
+        $where = "  WHERE `id` = $article_id";
+
     }
 }
-//var_dump($where);
-//SELECT image FROM `article` WHERE id=29
-// Chargement des articles
 $articles = get_articles($where);
-//var_dump($articles[29]);
-?>
+var_dump($_GET[ART_ID]);
 
-    <img src="<?= PATH_IMAGE, $articles[30]['image'] ?>" alt=""/>
+?>
+<?php
+/*$monUrl = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+//var_dump($monUrl);
+
+    function make_url($urlname)
+    {
+    return str_replace('http://localhost/projet_final/details.php?ART_ID=', '', $urlname);
+    }
+    */?>
+
+<div id="banner_details">
+    <img src="<?= PATH_IMAGE, $articles[$_GET[ART_ID]]['image'] ?>" alt="<?=$articles[$_GET[ART_ID]]['description']?>"/>
+</div>
     <div class="fond row" id="wrapper">
         <div class="bloc_text_activite">
             <h2>L'activité</h2>
