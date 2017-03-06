@@ -114,7 +114,7 @@ $articles = get_articles($where);
         </div>
         <div>
             <div class="row text_bande_bleu">
-                <div class="col-4">
+                <div class="col-4 col-m-12">
                     <p><a href="catalogue.php">RETOUR AU ACTIVITES</a></p>
                 </div>
             </div>
