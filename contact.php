@@ -1,7 +1,7 @@
 <?php
 $description = "";
 $title = "";
-require_once "define.php";
+require_once "db/define.php";
 require_once 'db/db_access.php';
 require_once 'db/db_define_local.php';
 ?>

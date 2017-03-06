@@ -1,7 +1,7 @@
 <?php
 $description = "";
 $title = "";
-require_once "define.php";
+require_once "db/define.php";
 require_once 'db/db_access.php';
 require_once 'db/db_define_local.php';
 require_once "views/top.php";
@@ -26,7 +26,7 @@ function retire_accents($str)
     return $resultat;
 }
 
-var_dump($_POST);
+
 
 $liste_villes = array('choisir', 'Montréal', 'Quebec', 'Longueil', 'Laval', 'Autres');
 $liste_activite = array('choisir', 'Natation', 'Course', 'Velos', 'Fitness', 'Art Martiaux');
@@ -114,7 +114,7 @@ if ($reception && empty($villes)) {
 
 }
 
-var_dump($villes);
+
 $activite_valide = true;
 $activite = array(); // villes sélectionnés par l'utilisateur
 if (array_key_exists('activite', $_POST)) {
@@ -125,7 +125,7 @@ if ($reception && empty($activite)) {
     $activite_valide = false;
 }
 
-var_dump($activite);
+
 
 
 if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide && $age_valide && $adresse_valide
