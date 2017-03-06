@@ -64,32 +64,31 @@ if (is_logged_in() && array_key_exists('logout_btn', $_POST)) {
 <body>
 <header>
     <div id="menu_fixe" class="row">
-        <div class="col-6">
+        <div class="col-6 col-m-12">
             <a href="index.php"><img src="images/logo.png" alt="le logo du site"></a>
         </div>
         <div class="col-6">
             <nav>
                 <ul class="row">
-                    <li class="col-2"><a href="index.php"> Accueil</a></li>
-                    <li class="col-2"><a href="catalogue.php"> Activités</a></li>
+                    <li class="col-2 col-m-12"><a href="index.php"> Accueil</a></li>
+                    <li class="col-2 col-m-12"><a href="catalogue.php"> Activités</a></li>
                     <li class="col-2"><a href="contact.php"> Contact</a></li>
-                 <?php if (is_logged_in() ){
-                     echo " 
+                    <?php if (is_logged_in()) {
+                        echo " 
                     <form name='logout' id='logout' method='post'>
                         <input type='submit' id='logout_btn' name='logout_btn' value='Déconnecter'/>
                         <a style='visibility: hidden' href='inscription.php'>s'inscrire</a>
-                    </form> ";
-                     echo "
+                    </form>";
+                        echo "
                   <marquee direction='left' scrollamount='4' onMouseOver='this.stop();' onMouseOut='this.start();'>
                         <span>Bienvenu dans votre espace personel</span>
-                    </marquee> " ;
+                    </marquee> ";
 
-                 }
-                    else {
-                     echo "<li class='col-2'><a href='#id01'> Connexion</a></li>
-                    <li class='col-2'><a href='inscription.php'>Inscription</a></li> ";
+                    } else {
+                        echo "<li class='col-2 col-m-12'><a href='#id01'> Connexion</a></li>
+                    <li class='col-2 col-m-12'><a href='inscription.php'>Inscription</a></li> ";
 
-                 }?>
+                    } ?>
                 </ul>
             </nav>
         </div>
@@ -137,7 +136,7 @@ if (is_logged_in() && array_key_exists('logout_btn', $_POST)) {
                             <p>Le pseudo et le mot de passe fournis ne concordent pas.</p>
                         <?php } ?>
                         <div class="div_login">
-                        <input type="submit" id="login_btn" name="login_btn" value="Connecter"/>
+                            <input type="submit" id="login_btn" name="login_btn" value="Connecter"/>
                         </div>
                     </form>
                 <?php } ?>

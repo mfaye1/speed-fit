@@ -641,14 +641,17 @@ footer.container {
     }
     .text_bande_bleu div.col-8 p:first-of-type {
         position: relative;
-        top: -21px;
-        width: 100%;
+        top: -25px;
+        width: 114%;
         text-align: left;
-        height: 51px;
+        height: 78px;
     }
     .text_bande_bleu {
         position: absolute;
         min-width: 0%;
+    }
+    .categorie_index .col-4 img {
+        width: 114%;
     }
     /***************************FOOTER***********************/
     #bloc_menu_footer {
@@ -663,5 +666,25 @@ footer.container {
         position: relative;
         /* top: 6%; */
         left: 31%;
+    }
+    /************************Modal-box**************************/
+    #login {
+        width: 100%;
+        margin-left: -12%;
+    }
+    #logout input {
+        margin: 91px 0;
+        margin-left: -17%;
+    }
+    marquee{
+        margin:0%;
+    }
+    .div_login input {
+        width: 233px;
+    }
+    /****************************CATALOGUE*********************/
+    .img_activites img{
+        width: 155%;
+        padding-left: 61px;
     }
 }

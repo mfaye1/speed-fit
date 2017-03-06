@@ -30,7 +30,7 @@ $articles = get_articles($where);
 ?>
 <main>
     <div id="wrapper" class="row">
-        <div class="col-3">
+        <div class="col-3 col-m-12">
             <?php require_once 'views/aside.php'; ?>
 
         </div>
@@ -40,7 +40,7 @@ $articles = get_articles($where);
                     <div>
                         <!--<h2><? /*= utf8_encode($article['name']) */ ?></h2>-->
                     </div>
-                    <div>
+                    <div class="img_activites">
                         <a href="details.php"><img src="<?= PATH_IMAGE, make_m_filename($article['image']) ?>"
                                                    alt="<?= $article['name'] ?>"/></a>
                     </div>
