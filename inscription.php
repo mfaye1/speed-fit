@@ -234,10 +234,9 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
                     <?php foreach ($liste_villes as $ville) {
                         ?>
                         <option value="<?= $ville ?>"><?= $ville ?></option>
-                        $option_value = ($ville);
                     ?>
-                        <option value="<?= $option_value ?>"
-                            <?= array_key_exists('villes', $_POST) && in_array($option_value, $_POST['villes']) ? /*'selected="selected"' */: '' ?>
+                        <option value="<?= $ville ?>"
+                            <?= array_key_exists('villes', $_POST) && in_array($ville, $_POST['villes']) ? /*'selected="selected"' */: '' ?>
                         ><?= $ville ?></option>
                     <?php } ?>
                 </select>
