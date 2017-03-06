@@ -263,7 +263,7 @@ div.fond h1 {
     margin-bottom: 3.2%;
 }
 
-.genre {
+.genre, .genre_catalogue {
     /*display: none pour le titre;*/
     position: absolute;
     bottom: 0;

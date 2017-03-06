@@ -34,7 +34,7 @@ $articles = get_articles($where);
 <?php { ?>
     <div class="banner">
         <img src="<?= PATH_IMAGE, $articles[29]['image'] ?>"
-             alt="une fille en pompe comme banner de la page d'accueil"/></a>
+             alt="<?= $articles[29]['description'] ?>"/>
     </div>
 <?php } ?>
 <div>
@@ -58,20 +58,20 @@ $articles = get_articles($where);
     <?php { ?>
         <div id="promo_famille" class="col-4">
             <a href="#">
-                <img src="<?= PATH_IMAGE, make_m_filename($articles[53]['image']) ?>" alt=""/>
-                <p class="genre">cette homme est avec son enfant n'est ce pas ? maintenant allons-y</p>
+                <img src="<?= PATH_IMAGE, make_m_filename($articles[53]['image']) ?>" alt="<?= $articles[53]['description'] ?>"/>
+                <p class="genre"><?= $articles[53]['name'] ?></p>
             </a>
         </div>
         <div id="promo_mass" class="col-4">
             <a href="#">
-                <img src="<?= PATH_IMAGE, make_m_filename($articles[47]['image']) ?>" alt=""/>
-                <p class="genre">cette femme est en train de se masser n'est ce pas ? maintenant allons-y</p>
+                <img src="<?= PATH_IMAGE, make_m_filename($articles[47]['image']) ?>" alt="<?= $articles[47]['description'] ?>"/>
+                <p class="genre"><?= $articles[47]['name'] ?></p>
             </a>
         </div>
         <div id="promo_vieu" class="col-4">
             <a href="#">
-                <img src="<?= PATH_IMAGE, make_m_filename($articles[36]['image']) ?>" alt=""/>
-                <p class="genre">cette femme est en train de se masser n'est ce pas ? maintenant allons-y</p>
+                <img src="<?= PATH_IMAGE, make_m_filename($articles[36]['image']) ?>" alt="<?= $articles[36]['description'] ?>"/>
+                <p class="genre"><?= $articles[36]['name'] ?></p>
             </a>
         </div>
     <?php } ?>

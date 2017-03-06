@@ -36,13 +36,12 @@ $articles = get_articles($where);
         </div>
         <div class=" row col-9">
             <?php foreach ($articles as $id => $article) { ?>
-                <div id="article" class="col-6">
-                    <div>
-                        <!--<h2><? /*= utf8_encode($article['name']) */ ?></h2>-->
-                    </div>
-                    <div class="img_activites">
-                        <a href="details.php"><img src="<?= PATH_IMAGE, make_m_filename($article['image']) ?>"
-                                                   alt="<?= $article['name'] ?>"/></a>
+                <div  class="col-6" id="promo_famille">
+                    <div class="img_activites" >
+                        <a href="details.php">
+                            <img src="<?= PATH_IMAGE, make_m_filename($article['image']) ?>" alt="<?= $article['description'] ?>"/>
+                            <p class="genre" style="width:88%; margin-left:3% ; "><?= $article['name'] ?></p>
+                        </a>
                     </div>
                 </div>
             <?php } ?>
