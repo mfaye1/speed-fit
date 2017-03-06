@@ -523,6 +523,7 @@ img.col-m-12{
 
 /* Display the modal when targeted */
 .modal:target {
+    z-index: 99;
     display: table;
     position: absolute;
 }
