@@ -1,13 +1,4 @@
-
 <aside>
-    <?php
-//    var_dump($_POST);
-    $recherche=$_POST['search'];
-//    var_dump($recherche);
-    if (array_key_exists($recherche,$_POST)){
-
-    }
-    ?>
     <div>
         <form method="post">
             <input type="text" name="search" placeholder="Search..">
