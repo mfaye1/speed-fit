@@ -15,7 +15,7 @@ if (array_key_exists(ART_ID, $_GET)) {
     }
 }
 $articles = get_articles($where);
-var_dump($_GET[ART_ID]);
+//var_dump($_GET[ART_ID]);
 
 ?>
 <?php
@@ -42,7 +42,7 @@ var_dump($_GET[ART_ID]);
                 in eros volutpat, ullamcorper velit non, viverra augue.</p>
         </div>
 
-        <div id="accordion">
+        <div id="accordion" class="bloc_text_activite">
             <h3>Pour les moins de 6 ans</h3>
             <div>
                 <p>
@@ -122,12 +122,14 @@ var_dump($_GET[ART_ID]);
                 <div class="col-4 col-m-12">
                     <p><a href="catalogue.php">RETOUR AU ACTIVITES</a></p>
                 </div>
+                <div class="col-4 col-m-12">
+                    <p><a href="calendrier.php">RETOUR AU ACTIVITES</a></p>
+                </div>
             </div>
             <div class="bande_bleu">
                 <img src="images/bande_bleu.png" alt="">
             </div>
         </div>
-
     </div>
 
 

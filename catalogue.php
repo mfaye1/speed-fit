@@ -6,6 +6,9 @@ require_once 'db/db_define_local.php';
 require_once 'db/db_access.php';
 require_once 'views/top.php';
 require_once 'views/header.php';
+function retire_accents($str) {
+    return str_replace('é','e',$str);
+}
 $id_cat = '';
 $where = '';
 if (array_key_exists(CAT_ID, $_GET)) {
@@ -42,7 +45,7 @@ $articles = get_articles($where);
                         <a href="details.php?art_id=<?=$article['id']?>">
                             <img src="<?= PATH_IMAGE, make_m_filename($article['image']) ?>"
                                  alt="<?= $article['description'] ?>"/>
-                            <p class="genre" style="margin-left:3% ; "><?= $article['name'] ?></p>
+                            <p class="genre" style="margin-left:3% ; "><?= retire_accents($article['name']) ?></p>
                         </a>
                     </div>
                     <div>
