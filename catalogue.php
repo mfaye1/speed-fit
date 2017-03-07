@@ -45,7 +45,7 @@ $articles = get_articles($where);
                         <a href="details.php?art_id=<?=$article['id']?>">
                             <img src="<?= PATH_IMAGE, make_m_filename($article['image']) ?>"
                                  alt="<?= $article['description'] ?>"/>
-                            <p class="genre" style="margin-left:3% ; "><?= retire_accents($article['name']) ?></p>
+                            <p class="genre" style="margin-left:3% ; "><?= utf8_encode($article['name']) ?></p>
                         </a>
                     </div>
                     <div>
