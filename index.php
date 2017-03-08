@@ -1,7 +1,6 @@
-
 <?php
-$description='';
-$title='';
+$description = 'Centre de Fitness et de remise en forme. Profitez de nos services de massage et de natation et d’activité sous le soleil et pour vos sorties en famille';
+$title = 'Centre de fitness à Montréal || activité physique chez Speedfit';
 require_once "define.php";
 require_once 'db/db_access.php';
 require_once 'db/db_define_local.php';
@@ -18,9 +17,11 @@ if (array_key_exists(CAT_ID, $_GET)) {
     }
 }
 
-function make_m_filename($filename) {
-    return str_replace('.jpg', '-m.jpg',$filename);
+function make_m_filename($filename)
+{
+    return str_replace('.jpg', '-m.jpg', $filename);
 }
+
 //var_dump($where);
 //SELECT image FROM `article` WHERE id=29
 // Chargement des articles
@@ -49,28 +50,31 @@ $articles = get_articles($where);
                 Sed lacinia odio ac rutrum laoreet. Aliquam placerat libero non facilisis elementum.</p>
         </div>
     </div>
-    <div class="bande_bleu">
+    <div class="bande_bleu col-m-12">
         <img src="images/bande_bleu.png" alt="">
     </div>
 </div>
 
 <div class="categorie_index row">
     <?php { ?>
-        <div id="promo_famille" class="col-4">
+        <div id="promo_famille" class="col-4 col-m-12">
             <a href="#">
-                <img src="<?= PATH_IMAGE, make_m_filename($articles[53]['image']) ?>" alt="<?= $articles[53]['description'] ?>"/>
+                <img src="<?= PATH_IMAGE, make_m_filename($articles[53]['image']) ?>"
+                     alt="<?= $articles[53]['description'] ?>"/>
                 <p class="genre"><?= $articles[53]['name'] ?></p>
             </a>
         </div>
-        <div id="promo_mass" class="col-4">
+        <div id="promo_mass" class="col-4 col-m-12">
             <a href="#">
-                <img src="<?= PATH_IMAGE, make_m_filename($articles[47]['image']) ?>" alt="<?= $articles[47]['description'] ?>"/>
+                <img src="<?= PATH_IMAGE, make_m_filename($articles[47]['image']) ?>"
+                     alt="<?= $articles[47]['description'] ?>"/>
                 <p class="genre"><?= $articles[47]['name'] ?></p>
             </a>
         </div>
-        <div id="promo_vieu" class="col-4">
+        <div id="promo_vieu" class="col-4 col-m-12">
             <a href="#">
-                <img src="<?= PATH_IMAGE, make_m_filename($articles[36]['image']) ?>" alt="<?= $articles[36]['description'] ?>"/>
+                <img src="<?= PATH_IMAGE, make_m_filename($articles[36]['image']) ?>"
+                     alt="<?= $articles[36]['description'] ?>"/>
                 <p class="genre"><?= $articles[36]['name'] ?></p>
             </a>
         </div>

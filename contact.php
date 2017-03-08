@@ -1,6 +1,6 @@
 <?php
-$description = "";
-$title = "";
+$description = "Trouver un centre de gym ou d’activité physique à Montréal ainsi que les horaires d’ouvertures et l’adresse au complète";
+$title = "Des activités physiques à Montréal ||centre d’activités Speedfit ";
 require_once "define.php";
 require_once 'db/db_access.php';
 require_once 'db/db_define_local.php';
@@ -27,7 +27,7 @@ $articles = get_articles($where);
 
     <img class="col-m-12" src="<?= PATH_IMAGE, $articles[28]['image'] ?>" alt=""/>
     <div  class="fond row" id="wrapper">
-        <h1>Contact</h1>
+        <h1 id="conta">Contact</h1>
         <div id="bloc_text_contact" class="col-10 col-m-12">
             <div id="bloc_adresse" class="col-6 col-m-12">
             <h2>Adresse</h2>

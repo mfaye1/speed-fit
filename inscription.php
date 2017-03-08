@@ -68,7 +68,7 @@ if ($reception && empty($sexe)) {
 }
 /*********validation du champ age-----*/
 $age = '';
-$age_valide = 'true';
+$age_valide = true;
 if (array_key_exists('champ_age', $_POST)) {
     $age = filter_input(INPUT_POST, 'champ_age', FILTER_SANITIZE_NUMBER_INT);
 }
@@ -128,17 +128,18 @@ if ($reception && empty($activite)) {
 
 
 
-if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide && $age_valide && $adresse_valide
-    && $enfant_valide && $villes_valides && $activite_valide
-) {
-    header('Location:inscription.php');
+if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide && $age_valide
+    && $enfant_valide && $villes_valides
+)
+{
+    header('Location:index.php');
     exit;
 }
 
 ?>
-<img class="col-m-12" src="<?= PATH_IMAGE, $articles[14]['image'] ?>" alt=""/>
+<img class="col-m-12" src="<?= PATH_IMAGE, $articles[14]['image'] ?>" alt="<?= $articles[14]['description']?>"/>
 <div class="fond row" id="wrapper">
-    <h1>Inscription</h1>
+    <h1 id="insc">Inscription</h1>
     <div id="bloc_form" class="col-10 col-m-12">
         <form method="post" id='form_contact' action="#">
 
@@ -178,11 +179,11 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
             <label class="col-12" for="champ_sexe">Sexe</label>
 
             <div class="<?= $sexe_valide ? '' : 'invalid' ?>">
-                <div class="col-12" id="bloc_sexe">
-                    <label class="col-3 col-m-4" for="sexe">Homme:</label>
-                    <input class="col-3 col-m-6" type="radio" name="sexe[]" id="sexe" value="sexe_h"/>
-                    <label class="col-3 col-m-4" for="sexe">Femme:</label>
-                    <input class="col-3 col-m-8" type="radio" name="sexe[]" id="sexe" value="sexe_f"/>
+                <div class="col-12 col-m-12" id="bloc_sexe">
+                    <label class="radio_sexe label_radio" for="sexe">Homme:</label>
+                    <input class="radio_sexe radio_btn" type="radio" name="sexe[]" id="sexe" value="sexe_h"/>
+                    <label class="radio_sexe label_radio" for="sexe">Femme:</label>
+                    <input class="radio_sexe radio_btn" type="radio" name="sexe[]" id="sexe" value="sexe_f"/>
                 </div>
                 <?php
                 if (!$sexe_valide) {
@@ -203,11 +204,11 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
 
             <div class="<?= $enfant_valide ? '' : 'invalid' ?>">
                 <div class="col-12" id="bloc_enfant">
-                    <label class="col-12" for="enfant">Avez-vous des enfants</label>
-                    <label class="col-3 col-m-4" for="enfant">Oui</label>
-                    <input class="col-3 col-m-4" type="checkbox" name="enfant[]" id="enfant" value="oui"/>
-                    <label class="col-3 col-m-4" for="enfant">Non</label>
-                    <input class="col-3 col-m-6" type="checkbox" name="enfant[]" id="enfant" value="non"/>
+                    <label class="col-12 col-m-12" for="enfant">Avez-vous des enfants</label>
+                    <label class="checkbox_enfant label_checkbox" for="enfant">Oui</label>
+                    <input class="checkbox_enfant btn_checkbox" type="checkbox" name="enfant[]" id="enfant" value="oui"/>
+                    <label class="checkbox_enfant label_checkbox" for="enfant">Non</label>
+                    <input class="checkbox_enfant btn_checkbox" type="checkbox" name="enfant[]" id="enfant" value="non"/>
                     <?php
                     if (!$enfant_valide) {
                         echo "<p>s'il vous plait veuillez indiquer si vous avez des enfants ou pas </p>";
@@ -245,21 +246,21 @@ if ($reception && $nom_valide && $prenom_valide && $email_valide && $sexe_valide
                 <?php } ?>
             </div>
 
-            <div class="<?= $activite_valide ? '' : 'invalid' ?>">
+            <!--<div class="<?/*= $activite_valide ? '' : 'invalid' */?>">
                 <label class="col-12" for="activite">Activité Favori</label>
                 <select class="col-6 col-m-12" name="activite[]" id="activite">
-                    <?php foreach ($liste_activite as $activite) {
+                    <?php /*foreach ($liste_activite as $activite) {
                         $value = ($activite);
-                        ?>
-                        <option value="<?= $value ?>"
-                            <?= array_key_exists('activite', $_POST) && in_array($value, $_POST['activite']) ? 'selected="selected"' : '' ?>
-                        ><?= $activite ?></option>
-                    <?php } ?>
+                        */?>
+                        <option value="<?/*= $value */?>"
+                            <?/*= array_key_exists('activite', $_POST) && in_array($value, $_POST['activite']) ? 'selected="selected"' : '' */?>
+                        ><?/*= $activite */?></option>
+                    <?php /*} */?>
                 </select>
-                <?php if (!$activite_valide) { ?>
+                <?php /*if (!$activite_valide) { */?>
                     <p>Au moins un ville doit être sélectionné.</p>
-                <?php } ?>
-            </div>
+                <?php /*} */?>
+            </div>-->
 
             <div>
                 <input class="col-12" type="submit" value="Soumettre">

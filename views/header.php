@@ -56,6 +56,7 @@ if (is_logged_in() && array_key_exists('logout_btn', $_POST)) {
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
     <script src="script/jquery-3.1.1-min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="script/main.js"></script>
     <meta name="descrition" content="<?= $description ?>">
@@ -71,13 +72,13 @@ if (is_logged_in() && array_key_exists('logout_btn', $_POST)) {
             <nav>
                 <ul class="row">
                     <li class="col-2 col-m-12"><a href="index.php"> Accueil</a></li>
-                    <li class="col-2 col-m-12"><a href="catalogue.php"> Activités</a></li>
-                    <li class="col-2 col-m-12"><a href="contact.php"> Contact</a></li>
+                    <li class="col-2 col-m-12"><a href="catalogue.php#promo_famille"> Activités</a></li>
+                    <li class="col-2 col-m-12"><a href="contact.php#conta"> Contact</a></li>
                     <?php if (is_logged_in()) {
                         echo " 
                     <form name='logout' id='logout' method='post'>
                         <input type='submit' id='logout_btn' name='logout_btn' value='Déconnecter'/>
-                        <a style='visibility: hidden' href='inscription.php'>s'inscrire</a>
+                        <a style='visibility: hidden' href='inscription.php#insc'>s'inscrire</a>
                     </form>";
                         echo "
                   <marquee direction='left' scrollamount='4' onMouseOver='this.stop();' onMouseOut='this.start();'>
@@ -86,7 +87,7 @@ if (is_logged_in() && array_key_exists('logout_btn', $_POST)) {
 
                     } else {
                         echo "<li class='col-2 col-m-12'><a href='#id01'> Connexion</a></li>
-                    <li class='col-2 col-m-12'><a href='inscription.php'>Inscription</a></li> ";
+                    <li class='col-2 col-m-12'><a href='inscription.php#insc'>Inscription</a></li> ";
 
                     } ?>
                 </ul>
@@ -118,7 +119,7 @@ if (is_logged_in() && array_key_exists('logout_btn', $_POST)) {
 
                     <form name="logout" id="logout" method="post">
                         <input type="submit" id="logout_btn" name="logout_btn" value="Déconnecter"/>
-                        <a style="visibility: hidden" href="inscription.php">s'inscrire</a>
+                        <a style="visibility: hidden" href="inscription.php#insc">s'inscrire</a>
                     </form>
 
                 <?php } else { ?>

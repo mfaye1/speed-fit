@@ -1,6 +1,6 @@
 <?php
-$description = '';
-$title = '';
+$description = 'Tout ce qui est activité physique et divertissement ainsi que tous nos centres et tous nos matériaux de fitness ';
+$title = 'Type d’activité physique à Montréal || activité d’été de Speedfit';
 require_once "define.php";
 require_once 'db/db_define_local.php';
 require_once 'db/db_access.php';
@@ -38,9 +38,9 @@ $articles = get_articles($where);
         <div class="col-3 col-m-12">
             <?php require_once 'views/aside.php'; ?>
         </div>
-        <div class=" row col-9">
+        <div class=" row col-9 col-m-12">
             <?php foreach ($articles as $id => $article) { ?>
-                <div class="col-6" id="promo_famille">
+                <div class="col-6 col-m-12" id="promo_famille">
                     <div class="img_activites" id="promo_famille">
                         <a href="details.php?art_id=<?=$article['id']?>">
                             <img src="<?= PATH_IMAGE, make_m_filename($article['image']) ?>"

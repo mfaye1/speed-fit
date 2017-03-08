@@ -122,9 +122,6 @@ $articles = get_articles($where);
                 <div class="col-4 col-m-12">
                     <p><a href="catalogue.php">RETOUR AU ACTIVITES</a></p>
                 </div>
-                <div class="col-4 col-m-12">
-                    <p><a href="calendrier.php">RETOUR AU ACTIVITES</a></p>
-                </div>
             </div>
             <div class="bande_bleu">
                 <img src="images/bande_bleu.png" alt="">

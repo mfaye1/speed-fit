@@ -96,6 +96,7 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
     background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -171,7 +172,10 @@ footer p {
     margin: 0;
     padding: 0;
 }
-
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
 /**************---------------CONTACT--------------***********************************************/
 .fond {
     background-color: #EBEBEB;
@@ -300,10 +304,11 @@ div.fond h1 {
 
 .text_bande_bleu p {
     color: white;
+
 }
 
 .text_bande_bleu div.col-8 p:first-of-type {
-    width: 85%;
+    width: 51%;
     text-align: left;
     height: 130px;
 }
@@ -338,7 +343,16 @@ background-color: #56aad6;
 }
 .div_login input[type='submit']{
     background-color: #56aad6;
-    width: 150px;
+    width: 100%;
+}
+.btn_checkbox,radio_btn{
+    width: 20%;
+}
+checkbox_enfant,radio_sexe {
+    float: none;
+}
+label_checkbox,label_radio{
+    width: 10%;
 }
 /***********************************-----Inscription-***-----------------------*/
 #bloc_text_contact {
@@ -348,20 +362,6 @@ background-color: #56aad6;
 
 #bloc_sexe, #bloc_enfant {
     position: relative;
-}
-
-input[type='radio']:first-of-type, input[type='radio']:nth-of-type(2), input[type='checkbox']:first-of-type, input[type='checkbox']:nth-of-type(2) {
-    position: absolute;
-    top: 40%;
-    left: 2%;
-}
-
-input[type='radio']:nth-of-type(2), input[type='checkbox']:nth-of-type(2) {
-    left: 26%;
-}
-
-input[type='checkbox']:first-of-type, input[type='checkbox']:nth-of-type(2) {
-    top: 65%;
 }
 
 .text_int {
@@ -526,7 +526,7 @@ img.col-m-12{
 
 /* Display the modal when targeted */
 .modal:target {
-    z-index: 99;
+    z-index: 1001;
     display: table;
     position: absolute;
 }
@@ -577,8 +577,8 @@ img.col-m-12{
 }
 header.container {
     background-color: #56aad6;
-    font-size: 25px;
     color: white;
+    width: 100%;
 }
 
 footer.container {
@@ -588,7 +588,7 @@ footer.container {
     height: 70px;
 }
 /***************************--------------------------------pour mobile 760px--------------------------------*/
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 720px) {
     /*--------------------------------------------grille mobile-------------------------------------------*/
     .col-m-1  {width: 8.33%;}
     .col-m-2  {width: 16.66%;}
@@ -647,7 +647,7 @@ footer.container {
         font-size: 20px;
     }
     .text_bande_bleu div.col-m-6 p:first-of-type{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     .text_bande_bleu div.col-8 p:first-of-type {
         position: relative;
@@ -663,7 +663,10 @@ footer.container {
         min-width: 0%;
     }
     .categorie_index .col-4 img {
-        width: 114%;
+        width: 100%;
+    }
+    div.categorie_index img{
+        width: 100%;
     }
     /***************************FOOTER***********************/
     #bloc_menu_footer {
@@ -677,7 +680,7 @@ footer.container {
     #logo_sociaux {
         position: relative;
         /* top: 6%; */
-        left: 31%;
+        left: 18%;
     }
     /************************Modal-box**************************/
     #login {
@@ -692,15 +695,42 @@ footer.container {
         margin:0%;
     }
     .div_login input {
-        width: 233px;
+        width: 100%;
     }
     form#login p{
         margin-left: 20px;
     }
     /****************************CATALOGUE*********************/
     .img_activites img{
-        width: 155%;
-        padding-left: 61px;
+        width: 100%;
+    }
+    #promo_famille:hover .genre, #promo_mass:hover .genre, #promo_vieu:hover .genre {
+        display: block;
+        margin: 0;
+        margin-bottom: 3.2%;
+    }
+
+    .genre, .genre_catalogue {
+        /*display: none pour le titre;*/
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 1%;
+        padding-top: 20px;
+        width: 93.9%;
+        height: 60px;
+        background-color: rgba(86, 170, 214, 0.7);
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        -webkit-transition: margin 1s;
+        transition: margin 1s;
+    }
+
+    #promo_famille, #promo_mass, #promo_vieu {
+        overflow: visible;
+        position: relative;
+        border: 1px solid #fff;
+        text-align: center;
     }
     /**********************CONTACT*************************/
     #bloc_text_contact {
@@ -734,14 +764,17 @@ footer.container {
         position: relative;
         z-index: 1;
     }
-
-    /****************************DETAIL************************/
-    .text_bande_bleu div.col-4 p:first-of-type {
-        height: 30px;
-         line-height: 0px;
-        border-right: 0;
-        text-align: center;
-        font-size: 20px;
+    input[type='radio']:nth-of-type(2){
+        position: relative;
     }
 
+        /****************************DETAIL************************/
+    .text_bande_bleu div.col-4 p:first-of-type {
+        height: 30px;
+        line-height: 20px;
+        border-right: 0;
+        text-align: center;
+        font-size: 0.7rem;
+
+    }
 }
